@@ -2,9 +2,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     loadState();
+    setupItemNotes();
     setupCheckboxListeners();
     setupNavigation();
-    setupNotes();
     updateAllProgress();
     trackStudyDay();
     buildKanban();
@@ -219,36 +219,97 @@ function filterSections(filter) {
         }
     }
 
-    // Also show/hide stats, notes, backup
+    // Also show/hide stats, backup
     const statsGrid = document.querySelector('.stats-grid');
-    const notesSection = document.querySelector('.notes-section');
     const backupSection = document.querySelector('.backup-section');
 
     if (filter === 'all') {
         statsGrid.classList.remove('hidden');
-        notesSection.classList.remove('hidden');
         if (backupSection) backupSection.classList.remove('hidden');
     } else {
         statsGrid.classList.add('hidden');
-        notesSection.classList.add('hidden');
         if (backupSection) backupSection.classList.add('hidden');
     }
 }
 
-// ===== Notes =====
+// ===== Item Notes =====
 
-function setupNotes() {
-    const textarea = document.getElementById('notesArea');
-    const saved = localStorage.getItem(NOTES_KEY);
+const ITEM_NOTES_KEY = 'academy-item-notes';
 
-    if (saved) textarea.value = saved;
+function getItemNotes() {
+    return JSON.parse(localStorage.getItem(ITEM_NOTES_KEY) || '{}');
+}
 
-    let saveTimeout;
-    textarea.addEventListener('input', () => {
-        clearTimeout(saveTimeout);
-        saveTimeout = setTimeout(() => {
-            localStorage.setItem(NOTES_KEY, textarea.value);
-        }, 500);
+function saveItemNotes(notes) {
+    localStorage.setItem(ITEM_NOTES_KEY, JSON.stringify(notes));
+}
+
+function setupItemNotes() {
+    const notes = getItemNotes();
+
+    document.querySelectorAll('.checklist-item').forEach(item => {
+        const id = item.dataset.id;
+
+        // Wrap existing content in a row div
+        const row = document.createElement('div');
+        row.className = 'checklist-item-row';
+        while (item.firstChild) {
+            row.appendChild(item.firstChild);
+        }
+        item.appendChild(row);
+
+        // Add note toggle button
+        const noteBtn = document.createElement('button');
+        noteBtn.className = 'note-toggle' + (notes[id] ? ' has-note' : '');
+        noteBtn.title = 'Anotação';
+        noteBtn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`;
+        noteBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const noteArea = item.querySelector('.note-area');
+            noteArea.classList.toggle('open');
+            if (noteArea.classList.contains('open')) {
+                noteArea.querySelector('textarea').focus();
+            }
+        });
+        row.appendChild(noteBtn);
+
+        // Add note area
+        const noteArea = document.createElement('div');
+        noteArea.className = 'note-area';
+        noteArea.innerHTML = `
+            <textarea placeholder="Escreva sua anotação sobre esta aula...">${notes[id] || ''}</textarea>
+            <div class="note-meta">
+                <span class="note-saved">Salvo!</span>
+                <span class="note-char-count">${(notes[id] || '').length} caracteres</span>
+            </div>
+        `;
+        item.appendChild(noteArea);
+
+        // Auto-save on input
+        const textarea = noteArea.querySelector('textarea');
+        const savedLabel = noteArea.querySelector('.note-saved');
+        const charCount = noteArea.querySelector('.note-char-count');
+        let saveTimeout;
+
+        textarea.addEventListener('input', () => {
+            clearTimeout(saveTimeout);
+            charCount.textContent = `${textarea.value.length} caracteres`;
+
+            saveTimeout = setTimeout(() => {
+                const allNotes = getItemNotes();
+                if (textarea.value.trim()) {
+                    allNotes[id] = textarea.value;
+                    noteBtn.classList.add('has-note');
+                } else {
+                    delete allNotes[id];
+                    noteBtn.classList.remove('has-note');
+                }
+                saveItemNotes(allNotes);
+
+                savedLabel.classList.add('visible');
+                setTimeout(() => savedLabel.classList.remove('visible'), 1500);
+            }, 400);
+        });
     });
 }
 
@@ -398,11 +459,13 @@ function showCelebration(milestone) {
 
 function exportData() {
     const data = {
-        version: 1,
+        version: 2,
         exportDate: new Date().toISOString(),
         progress: JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'),
         notes: localStorage.getItem(NOTES_KEY) || '',
-        studyDays: JSON.parse(localStorage.getItem(STREAK_KEY) || '[]')
+        itemNotes: JSON.parse(localStorage.getItem(ITEM_NOTES_KEY) || '{}'),
+        studyDays: JSON.parse(localStorage.getItem(STREAK_KEY) || '[]'),
+        kanban: JSON.parse(localStorage.getItem(KANBAN_KEY) || '{}')
     };
 
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
@@ -430,7 +493,9 @@ function importData(event) {
 
             localStorage.setItem(STORAGE_KEY, JSON.stringify(data.progress));
             if (data.notes) localStorage.setItem(NOTES_KEY, data.notes);
+            if (data.itemNotes) localStorage.setItem(ITEM_NOTES_KEY, JSON.stringify(data.itemNotes));
             if (data.studyDays) localStorage.setItem(STREAK_KEY, JSON.stringify(data.studyDays));
+            if (data.kanban) localStorage.setItem(KANBAN_KEY, JSON.stringify(data.kanban));
 
             location.reload();
         } catch (err) {
@@ -447,6 +512,7 @@ function resetData() {
 
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(NOTES_KEY);
+    localStorage.removeItem(ITEM_NOTES_KEY);
     localStorage.removeItem(STREAK_KEY);
     localStorage.removeItem(KANBAN_KEY);
     location.reload();
