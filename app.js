@@ -82,6 +82,8 @@ function updateAllProgress() {
     updateCategoryProgress('prova', ['raciocinio', 'logica', 'linguagemc', 'oo']);
     updateCategoryProgress('entrevista', ['criatividade']);
     updateCategoryProgress('recursos', ['extras']);
+    updateCategoryProgress('ingles', ['ingles']);
+    updateCategoryProgress('livro', ['livro']);
     updateGlobalProgress();
     updateStats();
 }
@@ -143,7 +145,7 @@ function updateStats() {
     document.getElementById('statPending').textContent = allItems.length - allChecked.length;
 
     // Count completed sections
-    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras'];
+    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles', 'livro'];
     let completedSections = 0;
 
     topics.forEach(topicId => {
@@ -271,7 +273,7 @@ function checkForCelebration() {
     }
 
     // Also celebrate completing a topic
-    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras'];
+    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles', 'livro'];
     topics.forEach(topicId => {
         const list = document.getElementById(`${topicId}-list`);
         if (!list) return;
@@ -352,10 +354,10 @@ function showCelebration(milestone) {
 
     // Show message
     const messages = {
-        25: 'Otimo comeco! 25% concluido!',
+        25: 'Ótimo começo! 25% concluído!',
         50: 'Metade do caminho! Continue assim!',
-        75: 'Quase la! 75% concluido!',
-        100: 'Parabens! Todos os topicos concluidos!'
+        75: 'Quase lá! 75% concluído!',
+        100: 'Parabéns! Todos os tópicos concluídos!'
     };
 
     const toast = document.createElement('div');
@@ -422,7 +424,7 @@ function importData(event) {
             const data = JSON.parse(e.target.result);
 
             if (!data.progress) {
-                alert('Arquivo invalido. Selecione um backup valido.');
+                alert('Arquivo inválido. Selecione um backup válido.');
                 return;
             }
 
@@ -432,7 +434,7 @@ function importData(event) {
 
             location.reload();
         } catch (err) {
-            alert('Erro ao ler o arquivo. Verifique se e um backup valido.');
+            alert('Erro ao ler o arquivo. Verifique se é um backup válido.');
         }
     };
     reader.readAsText(file);
@@ -440,8 +442,8 @@ function importData(event) {
 }
 
 function resetData() {
-    if (!confirm('Tem certeza que deseja apagar todo o progresso? Essa acao nao pode ser desfeita.')) return;
-    if (!confirm('ULTIMA CHANCE: Todos os dados serao apagados. Continuar?')) return;
+    if (!confirm('Tem certeza que deseja apagar todo o progresso? Essa ação não pode ser desfeita.')) return;
+    if (!confirm('ÚLTIMA CHANCE: Todos os dados serão apagados. Continuar?')) return;
 
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(NOTES_KEY);
@@ -453,12 +455,14 @@ function resetData() {
 // ===== Kanban Board =====
 
 const TOPIC_LABELS = {
-    logica: 'Logica de Programacao',
+    logica: 'Lógica de Programação',
     linguagemc: 'Linguagem C',
-    raciocinio: 'Raciocinio Logico',
-    oo: 'Orientacao a Objetos',
+    raciocinio: 'Raciocínio Lógico',
+    oo: 'Orientação a Objetos',
     criatividade: 'Entrevista',
-    extras: 'Extras'
+    extras: 'Extras',
+    ingles: 'Inglês',
+    livro: 'Livro'
 };
 
 function getKanbanState() {

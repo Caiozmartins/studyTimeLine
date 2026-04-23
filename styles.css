@@ -349,6 +349,59 @@ body {
     color: var(--purple);
 }
 
+.badge-ingles {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-livro {
+    background: #fff3e0;
+    color: #e65100;
+}
+
+/* Resource link */
+.resource-link {
+    padding: 10px 20px 6px;
+}
+
+.resource-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.resource-link a:hover {
+    background: var(--accent-hover);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Topic icon colors for new sections */
+.topic-icon-ingles {
+    background: #e8f5e9 !important;
+    color: #2e7d32 !important;
+}
+
+.topic-icon-livro {
+    background: #fff3e0 !important;
+    color: #e65100 !important;
+}
+
+.step-ingles {
+    background: #2e7d32;
+}
+
+.step-livro {
+    background: #e65100;
+}
+
 .category-progress {
     display: flex;
     align-items: center;
@@ -726,6 +779,8 @@ body {
 .kanban-card-topic.topic-raciocinio { background: var(--green-light); color: var(--green); }
 .kanban-card-topic.topic-oo { background: var(--purple-light); color: var(--purple); }
 .kanban-card-topic.topic-criatividade { background: var(--red-light); color: var(--red); }
+.kanban-card-topic.topic-ingles { background: #e8f5e9; color: #2e7d32; }
+.kanban-card-topic.topic-livro { background: #fff3e0; color: #e65100; }
 .kanban-card-topic.topic-extras { background: var(--border-light); color: var(--text-secondary); }
 
 .kanban-card-actions {
