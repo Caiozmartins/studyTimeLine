@@ -461,10 +461,10 @@ const TOPIC_LABELS = {
     oo: 'Orientação a Objetos',
     criatividade: 'Entrevista',
     extras: 'Extras',
-    'ingles-m1': 'Inglês M1',
-    'ingles-m2': 'Inglês M2',
-    'ingles-m3': 'Inglês M3',
-    livro: 'Livro'
+    'ingles-m1': 'Inglês — Módulo 1 (Básico)',
+    'ingles-m2': 'Inglês — Módulo 2 (Intermediário)',
+    'ingles-m3': 'Inglês — Módulo 3 (Avançado)',
+    livro: 'Entendendo Algoritmos'
 };
 
 function getKanbanState() {
@@ -476,26 +476,25 @@ function saveKanbanState(state) {
 }
 
 function buildKanban() {
-    const todoCol = document.getElementById('kanban-todo');
-    const doingCol = document.getElementById('kanban-doing');
-    const doneCol = document.getElementById('kanban-done');
+    const board = document.getElementById('kanban-board');
+    if (!board) return;
 
-    if (!todoCol || !doingCol || !doneCol) return;
-
-    todoCol.innerHTML = '';
-    doingCol.innerHTML = '';
-    doneCol.innerHTML = '';
+    board.innerHTML = '';
 
     const kanbanState = getKanbanState();
     const checkboxState = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
 
-    // Collect items grouped by topic and status
-    const groups = { todo: {}, doing: {}, done: {} };
+    // Collect all items grouped by topic
+    const topicData = {};
 
     document.querySelectorAll('.topic-card').forEach(card => {
         const topic = card.dataset.topic;
         if (!topic) return;
-        const step = card.dataset.step || '0';
+        const step = parseInt(card.dataset.step || '0');
+
+        if (!topicData[topic]) {
+            topicData[topic] = { step, todo: [], doing: [], done: [] };
+        }
 
         card.querySelectorAll('.checklist-item').forEach(item => {
             const id = item.dataset.id;
@@ -509,97 +508,105 @@ function buildKanban() {
                 status = 'doing';
             }
 
-            if (!groups[status][topic]) {
-                groups[status][topic] = { step: parseInt(step), items: [] };
-            }
-            groups[status][topic].items.push({ id, text, status });
+            topicData[topic][status].push({ id, text });
         });
     });
 
-    let todoCount = 0, doingCount = 0, doneCount = 0;
+    // Sort topics by step, then render
+    const sortedTopics = Object.entries(topicData).sort((a, b) => a[1].step - b[1].step);
 
-    // Render grouped cards per column
-    ['todo', 'doing', 'done'].forEach(status => {
-        const col = status === 'todo' ? todoCol : status === 'doing' ? doingCol : doneCol;
-        const topicEntries = Object.entries(groups[status]);
+    sortedTopics.forEach(([topic, data]) => {
+        const total = data.todo.length + data.doing.length + data.done.length;
+        if (total === 0) return;
 
-        // Sort by step number
-        topicEntries.sort((a, b) => a[1].step - b[1].step);
+        const percent = Math.round((data.done.length / total) * 100);
+        const label = TOPIC_LABELS[topic] || topic;
 
-        topicEntries.forEach(([topic, data]) => {
-            const groupCard = createKanbanGroup(topic, data.items, status);
-            col.appendChild(groupCard);
+        const card = document.createElement('div');
+        card.className = 'kb-card';
 
-            if (status === 'todo') todoCount += data.items.length;
-            else if (status === 'doing') doingCount += data.items.length;
-            else doneCount += data.items.length;
-        });
+        card.innerHTML = `
+            <div class="kb-header" onclick="this.parentElement.classList.toggle('open')">
+                <div class="kb-header-left">
+                    <span class="kb-color-dot kb-dot-${topic}"></span>
+                    <span class="kb-title">${label}</span>
+                </div>
+                <div class="kb-header-right">
+                    <div class="kb-mini-progress">
+                        <div class="kb-mini-progress-fill" style="width: ${percent}%"></div>
+                    </div>
+                    <span class="kb-stats">${data.done.length}/${total}</span>
+                    <svg class="kb-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </div>
+            <div class="kb-body">
+                <div class="kb-columns">
+                    <div class="kb-col">
+                        <div class="kb-col-header col-todo">A Fazer <span class="kb-col-count">${data.todo.length}</span></div>
+                        <div class="kb-col-items" id="kb-todo-${topic}"></div>
+                    </div>
+                    <div class="kb-col">
+                        <div class="kb-col-header col-doing">Estudando <span class="kb-col-count">${data.doing.length}</span></div>
+                        <div class="kb-col-items" id="kb-doing-${topic}"></div>
+                    </div>
+                    <div class="kb-col">
+                        <div class="kb-col-header col-done">Concluído <span class="kb-col-count">${data.done.length}</span></div>
+                        <div class="kb-col-items" id="kb-done-${topic}"></div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        board.appendChild(card);
+
+        // Populate columns
+        const todoCol = card.querySelector(`#kb-todo-${topic}`);
+        const doingCol = card.querySelector(`#kb-doing-${topic}`);
+        const doneCol = card.querySelector(`#kb-done-${topic}`);
+
+        renderKbItems(todoCol, data.todo, 'todo');
+        renderKbItems(doingCol, data.doing, 'doing');
+        renderKbItems(doneCol, data.done, 'done');
     });
-
-    document.getElementById('kanban-todo-count').textContent = todoCount;
-    document.getElementById('kanban-doing-count').textContent = doingCount;
-    document.getElementById('kanban-done-count').textContent = doneCount;
 }
 
-function createKanbanGroup(topic, items, status) {
-    const group = document.createElement('div');
-    group.className = 'kanban-group';
-
-    const topicLabel = TOPIC_LABELS[topic] || topic;
-    const count = items.length;
-
-    group.innerHTML = `
-        <div class="kanban-group-header" onclick="this.parentElement.classList.toggle('open')">
-            <div class="kanban-group-info">
-                <span class="kanban-card-topic topic-${topic}">${topicLabel}</span>
-                <span class="kanban-group-count">${count}</span>
-            </div>
-            <svg class="kanban-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-        </div>
-        <div class="kanban-group-items"></div>
-    `;
-
-    const itemsContainer = group.querySelector('.kanban-group-items');
+function renderKbItems(container, items, status) {
+    if (items.length === 0) {
+        container.innerHTML = '<div class="kb-empty">Nenhum item</div>';
+        return;
+    }
 
     items.forEach(item => {
-        const row = document.createElement('div');
-        row.className = `kanban-item${status === 'done' ? ' kanban-item-done' : ''}`;
+        const el = document.createElement('div');
+        el.className = `kb-item${status === 'done' ? ' done-item' : ''}`;
 
         let btns = '';
         if (status === 'todo') {
             btns = `
-                <button class="kanban-card-btn" onclick="event.stopPropagation(); moveKanban('${item.id}', 'doing')" title="Estudando">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                <button class="kb-btn" onclick="moveKanban('${item.id}','doing')" title="Estudando">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 </button>
-                <button class="kanban-card-btn btn-done" onclick="event.stopPropagation(); moveKanban('${item.id}', 'done')" title="Concluído">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                </button>
-            `;
+                <button class="kb-btn kb-btn-done" onclick="moveKanban('${item.id}','done')" title="Concluído">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </button>`;
         } else if (status === 'doing') {
             btns = `
-                <button class="kanban-card-btn" onclick="event.stopPropagation(); moveKanban('${item.id}', 'todo')" title="Voltar">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                <button class="kb-btn kb-btn-undo" onclick="moveKanban('${item.id}','todo')" title="Voltar">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
                 </button>
-                <button class="kanban-card-btn btn-done" onclick="event.stopPropagation(); moveKanban('${item.id}', 'done')" title="Concluído">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                </button>
-            `;
+                <button class="kb-btn kb-btn-done" onclick="moveKanban('${item.id}','done')" title="Concluído">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </button>`;
         } else {
             btns = `
-                <button class="kanban-card-btn" onclick="event.stopPropagation(); moveKanban('${item.id}', 'todo')" title="Desfazer">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-                </button>
-            `;
+                <button class="kb-btn kb-btn-undo" onclick="moveKanban('${item.id}','todo')" title="Desfazer">
+                    <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                </button>`;
         }
 
-        row.innerHTML = `
-            <span class="kanban-item-text">${item.text}</span>
-            <div class="kanban-card-actions">${btns}</div>
-        `;
-        itemsContainer.appendChild(row);
+        el.innerHTML = `<span class="kb-item-text">${item.text}</span><div class="kb-item-actions">${btns}</div>`;
+        container.appendChild(el);
     });
-
-    return group;
 }
 
 function moveKanban(itemId, targetStatus) {
