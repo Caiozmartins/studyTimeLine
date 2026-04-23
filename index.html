@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma de Estudos - Apple Developer Academy UCB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg class="apple-icon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <div>
+                    <h1>Developer Academy UCB</h1>
+                    <p class="subtitle">Cronograma de Estudos</p>
+                </div>
+            </div>
+            <div class="header-progress">
+                <div class="progress-circle" id="globalProgressCircle">
+                    <svg viewBox="0 0 36 36">
+                        <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path class="progress-fill" id="globalProgressPath" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                    </svg>
+                    <span class="progress-text" id="globalProgressText">0%</span>
+                </div>
+                <span class="progress-label">Progresso Geral</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <button class="nav-btn active" data-section="all">Todos</button>
+            <button class="nav-btn" data-section="roadmap">Roteiro</button>
+            <button class="nav-btn" data-section="kanban">Kanban</button>
+            <button class="nav-btn" data-section="prova">Prova Tecnica</button>
+            <button class="nav-btn" data-section="entrevista">Entrevista</button>
+            <button class="nav-btn" data-section="recursos">Recursos</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- Stats Cards -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon stat-icon-total">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number" id="statCompleted">0</span>
+                    <span class="stat-label">Concluidos</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon stat-icon-pending">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number" id="statPending">0</span>
+                    <span class="stat-label">Pendentes</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon stat-icon-days">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number" id="statStreak">0</span>
+                    <span class="stat-label">Dias de estudo</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon stat-icon-sections">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-number" id="statSections">0/6</span>
+                    <span class="stat-label">Secoes completas</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROTEIRO DE ESTUDOS -->
+        <section class="roadmap-section" data-category="roadmap">
+            <div class="category-header">
+                <div class="category-title">
+                    <span class="category-badge badge-roadmap">Guia</span>
+                    <h2>Por Onde Comecar?</h2>
+                </div>
+            </div>
+
+            <div class="roadmap-intro">
+                <p>Siga esta ordem para construir uma base solida. Cada etapa prepara voce para a proxima.</p>
+            </div>
+
+            <div class="roadmap-timeline">
+                <!-- Etapa 1 -->
+                <div class="roadmap-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>Logica de Programacao</h3>
+                            <span class="step-duration">~2 semanas</span>
+                        </div>
+                        <p class="step-why">Comece aqui! E a base de tudo. Sem logica, nenhuma linguagem faz sentido.</p>
+                        <div class="step-courses">
+                            <h4>Cursos recomendados (gratuitos):</h4>
+                            <ul>
+                                <li>
+                                    <strong>Curso em Video - Algoritmos</strong> (Gustavo Guanabara)
+                                    <span class="course-tag best">Melhor opcao</span>
+                                    <p class="course-desc">40 aulas, em portugues, didatica excelente. Cobre variaveis, condicionais, lacos e funcoes do zero.</p>
+                                </li>
+                                <li>
+                                    <strong>Khan Academy - Intro to Algorithms</strong>
+                                    <span class="course-tag">Complementar</span>
+                                    <p class="course-desc">Visual e interativo. Bom para entender a "forma de pensar" algoritmica.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="step-practice">
+                            <span>Pratica:</span> Resolva 10-15 exercicios de logica basica antes de avancar.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 2 -->
+                <div class="roadmap-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>Linguagem C</h3>
+                            <span class="step-duration">~2-3 semanas</span>
+                        </div>
+                        <p class="step-why">A prova cobra C diretamente. Voce vai aplicar tudo que aprendeu de logica aqui.</p>
+                        <div class="step-courses">
+                            <h4>Cursos recomendados (gratuitos):</h4>
+                            <ul>
+                                <li>
+                                    <strong>Curso em Video - Linguagem C</strong> (Gustavo Guanabara)
+                                    <span class="course-tag best">Melhor opcao</span>
+                                    <p class="course-desc">Curso completo em portugues. Cobre sintaxe, arrays, ponteiros, funcoes e I/O.</p>
+                                </li>
+                                <li>
+                                    <strong>De aluno para aluno - Linguagem C</strong> (YouTube)
+                                    <span class="course-tag">Complementar</span>
+                                    <p class="course-desc">Aulas curtas e diretas. Bom para revisar topicos especificos.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="step-practice">
+                            <span>Pratica:</span> Faca pelo menos 20 exercicios no URI Online Judge (Beecrowd) - secao iniciante.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 3 -->
+                <div class="roadmap-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>Raciocinio Logico</h3>
+                            <span class="step-duration">~1-2 semanas (paralelo)</span>
+                        </div>
+                        <p class="step-why">Pode estudar junto com as etapas 1 e 2. Dedique 30 min por dia resolvendo questoes.</p>
+                        <div class="step-courses">
+                            <h4>Cursos recomendados (gratuitos):</h4>
+                            <ul>
+                                <li>
+                                    <strong>Matematica Rio - Raciocinio Logico</strong> (YouTube)
+                                    <span class="course-tag best">Melhor opcao</span>
+                                    <p class="course-desc">Aulas focadas em concursos. Cobre sequencias, proposicoes, tabelas-verdade e deducao.</p>
+                                </li>
+                                <li>
+                                    <strong>Professor Ferretto - Logica</strong> (YouTube)
+                                    <span class="course-tag">Complementar</span>
+                                    <p class="course-desc">Explicacoes claras com muitos exemplos resolvidos.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="step-practice">
+                            <span>Pratica:</span> Resolva questoes de concursos anteriores (CESPE/FCC) sobre raciocinio logico.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 4 -->
+                <div class="roadmap-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>Orientacao a Objetos</h3>
+                            <span class="step-duration">~1-2 semanas</span>
+                        </div>
+                        <p class="step-why">Depois de dominar C, aprenda OO. Os conceitos sao mais faceis com base de programacao.</p>
+                        <div class="step-courses">
+                            <h4>Cursos recomendados (gratuitos):</h4>
+                            <ul>
+                                <li>
+                                    <strong>Curso em Video - POO com Java</strong> (Gustavo Guanabara)
+                                    <span class="course-tag best">Melhor opcao</span>
+                                    <p class="course-desc">Explica classes, objetos, heranca, encapsulamento e polimorfismo de forma visual. Mesmo sendo Java, os conceitos sao universais.</p>
+                                </li>
+                                <li>
+                                    <strong>Codigo Fonte TV - Pilares da OO</strong> (YouTube)
+                                    <span class="course-tag">Resumo rapido</span>
+                                    <p class="course-desc">Videos curtos que explicam cada pilar de OO. Otimo para revisao.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="step-practice">
+                            <span>Pratica:</span> Crie um mini-projeto com classes (ex: sistema de cadastro) para fixar os conceitos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 5 -->
+                <div class="roadmap-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>Preparacao para Entrevista</h3>
+                            <span class="step-duration">~1 semana</span>
+                        </div>
+                        <p class="step-why">Depois de estudar o conteudo tecnico, foque na entrevista. Pesquise CBL e prepare suas historias.</p>
+                        <div class="step-courses">
+                            <h4>Recursos recomendados:</h4>
+                            <ul>
+                                <li>
+                                    <strong>Playlist "Estudos Apple Developer Academy | UCB"</strong> (YouTube)
+                                    <span class="course-tag best">Essencial</span>
+                                    <p class="course-desc">Dicas de ex-alunos e resolucoes de provas anteriores.</p>
+                                </li>
+                                <li>
+                                    <strong>Site oficial Apple - Challenge Based Learning</strong>
+                                    <span class="course-tag">Leitura</span>
+                                    <p class="course-desc">Entenda a metodologia que a Academy usa. Vai te destacar na entrevista.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="step-practice">
+                            <span>Pratica:</span> Faca um "pitch" de 2 min sobre um projeto/ideia sua e treine em voz alta.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Etapa 6 -->
+                <div class="roadmap-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>Diferenciais (Bonus)</h3>
+                            <span class="step-duration">Continuo</span>
+                        </div>
+                        <p class="step-why">Se sobrar tempo, esses conhecimentos extras vao te destacar dos outros candidatos.</p>
+                        <div class="step-courses">
+                            <h4>Recursos recomendados:</h4>
+                            <ul>
+                                <li>
+                                    <strong>Curso em Video - Git e GitHub</strong>
+                                    <span class="course-tag">Diferencial</span>
+                                    <p class="course-desc">20 aulas. Git e essencial no dia-a-dia da Academy.</p>
+                                </li>
+                                <li>
+                                    <strong>Swift Playgrounds</strong> (app gratuito da Apple)
+                                    <span class="course-tag">Diferencial</span>
+                                    <p class="course-desc">Aprenda Swift de forma interativa no iPad ou Mac. Mostra interesse pelo ecossistema Apple.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="roadmap-tip">
+                <div class="tip-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <div>
+                    <strong>Dica importante:</strong> Nao tente estudar tudo ao mesmo tempo. Siga a ordem e so avance quando se sentir confortavel com o topico atual. Consistencia (1-2h por dia) e melhor que maratonas esporadicas.
+                </div>
+            </div>
+        </section>
+
+        <!-- KANBAN BOARD -->
+        <section class="kanban-section hidden" data-category="kanban">
+            <div class="category-header">
+                <div class="category-title">
+                    <span class="category-badge badge-kanban">Visao Geral</span>
+                    <h2>Kanban</h2>
+                </div>
+            </div>
+            <div class="kanban-board">
+                <div class="kanban-column" data-status="todo">
+                    <div class="kanban-column-header todo-header">
+                        <h3>A Fazer</h3>
+                        <span class="kanban-count" id="kanban-todo-count">0</span>
+                    </div>
+                    <div class="kanban-cards" id="kanban-todo"></div>
+                </div>
+                <div class="kanban-column" data-status="doing">
+                    <div class="kanban-column-header doing-header">
+                        <h3>Estudando</h3>
+                        <span class="kanban-count" id="kanban-doing-count">0</span>
+                    </div>
+                    <div class="kanban-cards" id="kanban-doing"></div>
+                </div>
+                <div class="kanban-column" data-status="done">
+                    <div class="kanban-column-header done-header">
+                        <h3>Concluido</h3>
+                        <span class="kanban-count" id="kanban-done-count">0</span>
+                    </div>
+                    <div class="kanban-cards" id="kanban-done"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROVA TECNICA -->
+        <section class="category-section" data-category="prova">
+            <div class="category-header">
+                <div class="category-title">
+                    <span class="category-badge badge-prova">Eliminatoria</span>
+                    <h2>Prova Tecnica</h2>
+                </div>
+                <div class="category-progress">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="provaProgress"></div>
+                    </div>
+                    <span class="progress-percent" id="provaPercent">0%</span>
+                </div>
+            </div>
+
+            <!-- Etapa 1: Logica de Programacao -->
+            <div class="topic-card" data-topic="logica" data-step="1">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-1">Etapa 1</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <div>
+                            <h3>Logica de Programacao</h3>
+                            <p class="topic-description">Comece aqui! Algoritmos, estruturas de controle, variaveis e funcoes</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="logica-badge">0/7</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="logica-list">
+                        <li class="checklist-item" data-id="lp-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar fundamentos de algoritmos</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lp-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar variaveis e tipos de dados</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lp-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar operadores (aritmeticos, logicos, relacionais)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lp-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar condicionais (if/else, switch)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lp-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar lacos de repeticao (for, while, do-while)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lp-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar e usar funcoes/procedimentos</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lp-7">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver desafios no HackerRank/LeetCode (nivel iniciante)</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Etapa 2: Linguagem C -->
+            <div class="topic-card" data-topic="linguagemc" data-step="2">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-2">Etapa 2</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <div>
+                            <h3>Linguagem C</h3>
+                            <p class="topic-description">Sintaxe, arrays, ponteiros, I/O e funcoes</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="linguagemc-badge">0/7</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="linguagemc-list">
+                        <li class="checklist-item" data-id="lc-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar sintaxe basica de C (estrutura de um programa)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lc-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Declaracao de variaveis e tipos (int, float, char, etc.)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lc-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar entrada/saida (scanf, printf)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lc-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Trabalhar com arrays (vetores e matrizes)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lc-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entender ponteiros (conceitos basicos)</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="lc-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar funcoes em C com parametros e retorno</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="lc-7">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver exercicios praticos em C</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Etapa 3: Raciocinio Logico -->
+            <div class="topic-card" data-topic="raciocinio" data-step="3">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-3">Etapa 3</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Raciocinio Logico</h3>
+                            <p class="topic-description">Sequencias, diagramas logicos, proposicoes e deducao</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="raciocinio-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="raciocinio-list">
+                        <li class="checklist-item" data-id="rl-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar sequencias numericas e logicas</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="rl-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar proposicoes e conectivos logicos</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="rl-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar diagramas logicos (Venn, tabelas-verdade)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="rl-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver problemas de deducao logica</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="rl-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver questoes de concursos (raciocinio logico)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="rl-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Fazer testes de QI e logica online</span></label>
+                            <span class="priority low">Baixa</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Etapa 4: Orientacao a Objetos -->
+            <div class="topic-card" data-topic="oo" data-step="4">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-4">Etapa 4</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        </div>
+                        <div>
+                            <h3>Orientacao a Objetos</h3>
+                            <p class="topic-description">Classes, objetos, encapsulamento, heranca e polimorfismo</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="oo-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="oo-list">
+                        <li class="checklist-item" data-id="oo-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entender conceito de classes e objetos</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="oo-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar atributos (propriedades) e metodos</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="oo-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Compreender encapsulamento (public, private, protected)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="oo-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar heranca (extends, super)</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="oo-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entender polimorfismo (sobrescrita e sobrecarga)</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="oo-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar OO em Java, Python ou Swift</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENTREVISTA -->
+        <section class="category-section" data-category="entrevista">
+            <div class="category-header">
+                <div class="category-title">
+                    <span class="category-badge badge-entrevista">Classificatoria</span>
+                    <h2>Entrevista</h2>
+                </div>
+                <div class="category-progress">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="entrevistaProgress"></div>
+                    </div>
+                    <span class="progress-percent" id="entrevistaPercent">0%</span>
+                </div>
+            </div>
+
+            <!-- Etapa 5: Preparacao para Entrevista -->
+            <div class="topic-card" data-topic="criatividade" data-step="5">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-5">Etapa 5</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                        </div>
+                        <div>
+                            <h3>Preparacao para Entrevista</h3>
+                            <p class="topic-description">Criatividade, colaboracao, CBL e empreendedorismo</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="criatividade-badge">0/8</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="criatividade-list">
+                        <li class="checklist-item" data-id="ent-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar portfolio de projetos/ideias pessoais</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ent-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar como explicar abordagem de resolucao de problemas</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ent-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar exemplos de trabalho em equipe e lideranca</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ent-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar exemplos de resolucao de conflitos em grupo</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="ent-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Pesquisar a metodologia Challenge Based Learning (CBL)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ent-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Conhecer projetos desenvolvidos na Academy e valores do programa</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ent-7">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar pitch de empreendedorismo (ideia -> realidade)</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="ent-8">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisar topicos tecnicos para possivel abordagem na entrevista</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECURSOS ADICIONAIS -->
+        <section class="category-section" data-category="recursos">
+            <div class="category-header">
+                <div class="category-title">
+                    <span class="category-badge badge-recursos">Diferencial</span>
+                    <h2>Recursos Adicionais</h2>
+                </div>
+                <div class="category-progress">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="recursosProgress"></div>
+                    </div>
+                    <span class="progress-percent" id="recursosPercent">0%</span>
+                </div>
+            </div>
+
+            <div class="topic-card" data-topic="extras" data-step="6">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-6">Etapa 6</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Conhecimentos Extras</h3>
+                            <p class="topic-description">Git/GitHub, Scrum, Swift e ecossistema Apple</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="extras-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="extras-list">
+                        <li class="checklist-item" data-id="ext-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Assistir playlist "Estudos Apple Developer Academy | UCB" no YouTube</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="ext-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aprender conceitos basicos de Git e GitHub</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="ext-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar metodologia Scrum (sprints, daily, review, retro)</span></label>
+                            <span class="priority low">Baixa</span>
+                        </li>
+                        <li class="checklist-item" data-id="ext-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Introduzir-se a linguagem Swift (basico)</span></label>
+                            <span class="priority low">Baixa</span>
+                        </li>
+                        <li class="checklist-item" data-id="ext-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Conhecer o ecossistema Apple (Xcode, SwiftUI, UIKit)</span></label>
+                            <span class="priority low">Baixa</span>
+                        </li>
+                        <li class="checklist-item" data-id="ext-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Seguir @academyucb no Instagram para atualizacoes</span></label>
+                            <span class="priority low">Baixa</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section class="notes-section">
+            <h2>Anotacoes</h2>
+            <textarea id="notesArea" placeholder="Escreva suas anotacoes aqui... (salvas automaticamente)"></textarea>
+        </section>
+
+        <!-- Backup Section -->
+        <section class="backup-section">
+            <h2>Backup dos Dados</h2>
+            <p class="backup-desc">Exporte seu progresso para nao perder nada. Importe em qualquer navegador ou dispositivo.</p>
+            <div class="backup-buttons">
+                <button class="backup-btn export-btn" onclick="exportData()">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Exportar Progresso
+                </button>
+                <label class="backup-btn import-btn">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    Importar Progresso
+                    <input type="file" id="importFile" accept=".json" onchange="importData(event)" hidden>
+                </label>
+                <button class="backup-btn reset-btn" onclick="resetData()">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                    Resetar Tudo
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Feito para a preparacao da Apple Developer Academy UCB</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
