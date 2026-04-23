@@ -86,7 +86,7 @@
                     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
                 <div class="stat-info">
-                    <span class="stat-number" id="statSections">0/8</span>
+                    <span class="stat-number" id="statSections">0/10</span>
                     <span class="stat-label">Seções completas</span>
                 </div>
             </div>
@@ -678,12 +678,12 @@
             </div>
         </section>
 
-        <!-- CURSO DE INGLÊS -->
+        <!-- CURSO DE INGLÊS - MaHouse English -->
         <section class="category-section" data-category="ingles">
             <div class="category-header">
                 <div class="category-title">
-                    <span class="category-badge badge-ingles">Contínuo</span>
-                    <h2>Curso de Inglês</h2>
+                    <span class="category-badge badge-ingles">3 Módulos · 45 Aulas</span>
+                    <h2>MaHouse English</h2>
                 </div>
                 <div class="category-progress">
                     <div class="progress-bar">
@@ -693,55 +693,165 @@
                 </div>
             </div>
 
-            <div class="topic-card" data-topic="ingles" data-step="0">
+            <div class="resource-link" style="margin-bottom: 12px;">
+                <a href="https://members.kiwify.com/?club=acbb02c2-d5fb-4224-9862-cbca20a3d9d3" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    Acessar curso na Kiwify
+                </a>
+            </div>
+
+            <!-- Módulo 1 - Básico -->
+            <div class="topic-card" data-topic="ingles-m1" data-step="0">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-ingles">Paralelo</span>
+                        <span class="step-badge step-ingles">Módulo 1</span>
                         <div class="topic-icon topic-icon-ingles">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                         </div>
                         <div>
-                            <h3>Inglês</h3>
-                            <p class="topic-description">Curso de inglês — estude em paralelo com os demais tópicos</p>
+                            <h3>Básico</h3>
+                            <p class="topic-description">Alphabet, Verb To Be, Pronouns, Prepositions, Verbs e Daily Routine · 21 aulas</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="ingles-badge">0/6</span>
+                        <span class="topic-progress-badge" id="ingles-m1-badge">0/21</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <div class="resource-link">
-                        <a href="https://members.kiwify.com/?club=acbb02c2-d5fb-4224-9862-cbca20a3d9d3" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            Acessar curso na Kiwify
-                        </a>
+                    <ul class="checklist" id="ingles-m1-list">
+                        <li class="checklist-item" data-id="en1-01">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 01 — Boas Vindas + Alphabet</span></label>
+                            <span class="duration">47 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-02">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 02 — Alphabet + Spelling</span></label>
+                            <span class="duration">34 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-03">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 03 — Spelling and Speaking</span></label>
+                            <span class="duration">35 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-04">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 04 — Verb To Be</span></label>
+                            <span class="duration">47 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-05">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 05 — Verb To Be 2</span></label>
+                            <span class="duration">34 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-06">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 06 — Song Exercises</span></label>
+                            <span class="duration">35 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-07">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 07 — Pronouns (Explicando)</span></label>
+                            <span class="duration">21 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-08">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 08 — Pronouns (Exercise)</span></label>
+                            <span class="duration">25 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-09">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 09 — Prepositions</span></label>
+                            <span class="duration">17 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-10">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 10 — Prepositions 2</span></label>
+                            <span class="duration">15 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-11">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 11 — Prepositions 3</span></label>
+                            <span class="duration">17 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-12">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 12 — Preposition List</span></label>
+                            <span class="duration">37 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-13">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 13 — Prepositions Final</span></label>
+                            <span class="duration">30 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-14">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 14 — Verbs (Present & Infinitive)</span></label>
+                            <span class="duration">48 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-15">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 15 — Verbs (Simple Past & Future)</span></label>
+                            <span class="duration">38 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-16">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 16 — Verbs (Present Perfect & Present Perfect Continuous)</span></label>
+                            <span class="duration">35 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-17">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 17 — Verbs (Present & Past Continuous)</span></label>
+                            <span class="duration">30 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-18">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 18 — Verb List / Exercises</span></label>
+                            <span class="duration">45 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-19">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 19 — Exercises - Song</span></label>
+                            <span class="duration">30 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-20">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 20 — Daily Routine Verbs</span></label>
+                            <span class="duration">34 min</span>
+                        </li>
+                        <li class="checklist-item" data-id="en1-21">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 21 — Writing Your Daily Routine</span></label>
+                            <span class="duration"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Módulo 2 - A ser adicionado -->
+            <div class="topic-card" data-topic="ingles-m2" data-step="0">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-ingles-m2">Módulo 2</span>
+                        <div class="topic-icon topic-icon-ingles">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Intermediário</h3>
+                            <p class="topic-description">Aguardando conteúdo — envie as aulas do módulo 2</p>
+                        </div>
                     </div>
-                    <ul class="checklist" id="ingles-list">
-                        <li class="checklist-item" data-id="ing-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Iniciar o curso de inglês na plataforma Kiwify</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="ing-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar vocabulário técnico de programação em inglês</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="ing-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar leitura de documentação técnica em inglês</span></label>
-                            <span class="priority medium">Média</span>
-                        </li>
-                        <li class="checklist-item" data-id="ing-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Assistir vídeos/tutoriais de programação em inglês</span></label>
-                            <span class="priority medium">Média</span>
-                        </li>
-                        <li class="checklist-item" data-id="ing-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar escrita e conversação básica em inglês</span></label>
-                            <span class="priority medium">Média</span>
-                        </li>
-                        <li class="checklist-item" data-id="ing-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Completar todos os módulos do curso de inglês</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="ingles-m2-badge">—</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="ingles-m2-list">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Módulo 3 - A ser adicionado -->
+            <div class="topic-card" data-topic="ingles-m3" data-step="0">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-ingles-m3">Módulo 3</span>
+                        <div class="topic-icon topic-icon-ingles">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Avançado</h3>
+                            <p class="topic-description">Aguardando conteúdo — envie as aulas do módulo 3</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="ingles-m3-badge">—</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="ingles-m3-list">
                     </ul>
                 </div>
             </div>

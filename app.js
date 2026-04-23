@@ -82,7 +82,7 @@ function updateAllProgress() {
     updateCategoryProgress('prova', ['raciocinio', 'logica', 'linguagemc', 'oo']);
     updateCategoryProgress('entrevista', ['criatividade']);
     updateCategoryProgress('recursos', ['extras']);
-    updateCategoryProgress('ingles', ['ingles']);
+    updateCategoryProgress('ingles', ['ingles-m1', 'ingles-m2', 'ingles-m3']);
     updateCategoryProgress('livro', ['livro']);
     updateGlobalProgress();
     updateStats();
@@ -145,7 +145,7 @@ function updateStats() {
     document.getElementById('statPending').textContent = allItems.length - allChecked.length;
 
     // Count completed sections
-    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles', 'livro'];
+    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
     let completedSections = 0;
 
     topics.forEach(topicId => {
@@ -273,7 +273,7 @@ function checkForCelebration() {
     }
 
     // Also celebrate completing a topic
-    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles', 'livro'];
+    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
     topics.forEach(topicId => {
         const list = document.getElementById(`${topicId}-list`);
         if (!list) return;
@@ -461,7 +461,9 @@ const TOPIC_LABELS = {
     oo: 'Orientação a Objetos',
     criatividade: 'Entrevista',
     extras: 'Extras',
-    ingles: 'Inglês',
+    'ingles-m1': 'Inglês M1',
+    'ingles-m2': 'Inglês M2',
+    'ingles-m3': 'Inglês M3',
     livro: 'Livro'
 };
 
