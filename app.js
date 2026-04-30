@@ -79,9 +79,11 @@ function setupCheckboxListeners() {
 // ===== Progress Updates =====
 
 function updateAllProgress() {
-    updateCategoryProgress('prova', ['raciocinio', 'logica', 'linguagemc', 'oo']);
-    updateCategoryProgress('entrevista', ['criatividade']);
-    updateCategoryProgress('recursos', ['extras']);
+    updateCategoryProgress('fase0', ['swift-basico']);
+    updateCategoryProgress('fase1', ['swiftui-basico', 'projeto1', 'c-essencial']);
+    updateCategoryProgress('fase2', ['swift-avancado', 'projeto2', 'prova-prep']);
+    updateCategoryProgress('fase3', ['cbl-design', 'projeto-principal']);
+    updateCategoryProgress('fase4', ['portfolio', 'entrevista-final']);
     updateCategoryProgress('ingles', ['ingles-m1', 'ingles-m2', 'ingles-m3']);
     updateCategoryProgress('livro', ['livro']);
     updateGlobalProgress();
@@ -145,7 +147,7 @@ function updateStats() {
     document.getElementById('statPending').textContent = allItems.length - allChecked.length;
 
     // Count completed sections
-    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
+    const topics = ['swift-basico', 'swiftui-basico', 'projeto1', 'c-essencial', 'swift-avancado', 'projeto2', 'prova-prep', 'cbl-design', 'projeto-principal', 'portfolio', 'entrevista-final', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
     let completedSections = 0;
 
     topics.forEach(topicId => {
@@ -334,7 +336,7 @@ function checkForCelebration() {
     }
 
     // Also celebrate completing a topic
-    const topics = ['raciocinio', 'logica', 'linguagemc', 'oo', 'criatividade', 'extras', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
+    const topics = ['swift-basico', 'swiftui-basico', 'projeto1', 'c-essencial', 'swift-avancado', 'projeto2', 'prova-prep', 'cbl-design', 'projeto-principal', 'portfolio', 'entrevista-final', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
     topics.forEach(topicId => {
         const list = document.getElementById(`${topicId}-list`);
         if (!list) return;
@@ -521,12 +523,17 @@ function resetData() {
 // ===== Kanban Board =====
 
 const TOPIC_LABELS = {
-    logica: 'Lógica de Programação',
-    linguagemc: 'Linguagem C',
-    raciocinio: 'Raciocínio Lógico',
-    oo: 'Orientação a Objetos',
-    criatividade: 'Entrevista',
-    extras: 'Extras',
+    'swift-basico': 'Swift Básico + Git',
+    'swiftui-basico': 'SwiftUI Básico',
+    'projeto1': 'Projeto 1 — Publicar',
+    'c-essencial': 'C Essencial para Prova',
+    'swift-avancado': 'Swift + SwiftUI Intermediário',
+    'projeto2': 'Projeto 2 — Publicar',
+    'prova-prep': 'Preparação para Prova',
+    'cbl-design': 'CBL + Design Thinking',
+    'projeto-principal': 'Projeto Principal',
+    'portfolio': 'Portfolio + Simulados',
+    'entrevista-final': 'Preparação de Entrevista',
     'ingles-m1': 'Inglês — Módulo 1 (Básico)',
     'ingles-m2': 'Inglês — Módulo 2 (Intermediário)',
     'ingles-m3': 'Inglês — Módulo 3 (Avançado)',

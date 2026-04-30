@@ -19,7 +19,7 @@
                 </svg>
                 <div>
                     <h1>Developer Academy UCB</h1>
-                    <p class="subtitle">Cronograma de Estudos</p>
+                    <p class="subtitle">Plano Acelerado — 20 Semanas</p>
                 </div>
             </div>
             <div class="header-progress">
@@ -41,9 +41,11 @@
             <button class="nav-btn active" data-section="all">Todos</button>
             <button class="nav-btn" data-section="roadmap">Roteiro</button>
             <button class="nav-btn" data-section="kanban">Kanban</button>
-            <button class="nav-btn" data-section="prova">Prova Técnica</button>
-            <button class="nav-btn" data-section="entrevista">Entrevista</button>
-            <button class="nav-btn" data-section="recursos">Recursos</button>
+            <button class="nav-btn" data-section="fase0">Fase 0</button>
+            <button class="nav-btn" data-section="fase1">Fase 1</button>
+            <button class="nav-btn" data-section="fase2">Fase 2</button>
+            <button class="nav-btn" data-section="fase3">Fase 3</button>
+            <button class="nav-btn" data-section="fase4">Fase 4</button>
             <button class="nav-btn" data-section="ingles">Inglês</button>
             <button class="nav-btn" data-section="livro">Livro</button>
         </div>
@@ -86,7 +88,7 @@
                     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
                 <div class="stat-info">
-                    <span class="stat-number" id="statSections">0/10</span>
+                    <span class="stat-number" id="statSections">0/12</span>
                     <span class="stat-label">Seções completas</span>
                 </div>
             </div>
@@ -97,188 +99,156 @@
             <div class="category-header">
                 <div class="category-title">
                     <span class="category-badge badge-roadmap">Guia</span>
-                    <h2>Por Onde Começar?</h2>
+                    <h2>Plano Acelerado — 20 Semanas</h2>
                 </div>
             </div>
 
             <div class="roadmap-intro">
-                <p>Siga esta ordem para construir uma base sólida. Cada etapa prepara você para a próxima.</p>
+                <p><strong>Princípio:</strong> Construir > Estudar. Swift desde o dia 1. Cada semana produz algo concreto.</p>
             </div>
 
             <div class="roadmap-timeline">
-                <!-- Etapa 1 -->
+                <!-- Fase 0 -->
+                <div class="roadmap-step">
+                    <div class="step-number">0</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>Ignição — Swift + Git</h3>
+                            <span class="step-duration">Semanas 1–2</span>
+                        </div>
+                        <p class="step-why">Começa a programar em Swift HOJE. Zero teoria pura. Git desde o dia 1.</p>
+                        <div class="step-courses">
+                            <h4>Recursos:</h4>
+                            <ul>
+                                <li>
+                                    <strong>Swift Playgrounds</strong> (app gratuito da Apple)
+                                    <span class="course-tag best">Melhor opção</span>
+                                    <p class="course-desc">Aprenda Swift de forma interativa no iPad ou Mac.</p>
+                                </li>
+                                <li>
+                                    <strong>Curso em Vídeo — Git e GitHub</strong>
+                                    <span class="course-tag">Essencial</span>
+                                    <p class="course-desc">20 aulas. Git é obrigatório desde o dia 1.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="step-practice">
+                            <span>Entregável:</span> 2 mini-apps no GitHub + 14 commits (1/dia)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 1 -->
                 <div class="roadmap-step">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <div class="step-header">
-                            <h3>Lógica de Programação</h3>
-                            <span class="step-duration">~2 semanas</span>
+                            <h3>Fundação Swift</h3>
+                            <span class="step-duration">Semanas 3–6</span>
                         </div>
-                        <p class="step-why">Comece aqui! É a base de tudo. Sem lógica, nenhuma linguagem faz sentido.</p>
+                        <p class="step-why">Dominar SwiftUI básico e publicar o primeiro projeto real. C começa em paralelo (só o essencial para prova).</p>
                         <div class="step-courses">
-                            <h4>Cursos recomendados (gratuitos):</h4>
+                            <h4>Recursos:</h4>
                             <ul>
                                 <li>
-                                    <strong>Curso em Vídeo - Algoritmos</strong> (Gustavo Guanabara)
+                                    <strong>100 Days of SwiftUI</strong> (Hacking with Swift)
                                     <span class="course-tag best">Melhor opção</span>
-                                    <p class="course-desc">40 aulas, em português, didática excelente. Cobre variáveis, condicionais, laços e funções do zero.</p>
+                                    <p class="course-desc">Paul Hudson. Projeto-a-projeto. Dias 1–25 cobrem o essencial.</p>
                                 </li>
                                 <li>
-                                    <strong>Khan Academy - Intro to Algorithms</strong>
-                                    <span class="course-tag">Complementar</span>
-                                    <p class="course-desc">Visual e interativo. Bom para entender a "forma de pensar" algorítmica.</p>
+                                    <strong>Curso em Vídeo — Linguagem C</strong>
+                                    <span class="course-tag">Para prova</span>
+                                    <p class="course-desc">Só os fundamentos: variáveis, arrays, funções. Não precisa aprofundar.</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="step-practice">
-                            <span>Prática:</span> Resolva 10-15 exercícios de lógica básica antes de avançar.
+                            <span>Entregável:</span> Projeto 1 publicado no GitHub (3+ telas, persistência, README)
                         </div>
                     </div>
                 </div>
 
-                <!-- Etapa 2 -->
+                <!-- Fase 2 -->
                 <div class="roadmap-step">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <div class="step-header">
-                            <h3>Linguagem C</h3>
-                            <span class="step-duration">~2-3 semanas</span>
+                            <h3>Construção</h3>
+                            <span class="step-duration">Semanas 7–11</span>
                         </div>
-                        <p class="step-why">A prova cobra C diretamente. Você vai aplicar tudo que aprendeu de lógica aqui.</p>
+                        <p class="step-why">SwiftUI intermediário, OO em Swift (não Java), APIs, persistência avançada. C para prova.</p>
                         <div class="step-courses">
-                            <h4>Cursos recomendados (gratuitos):</h4>
+                            <h4>Recursos:</h4>
                             <ul>
                                 <li>
-                                    <strong>Curso em Vídeo - Linguagem C</strong> (Gustavo Guanabara)
+                                    <strong>100 Days of SwiftUI</strong> (continuação)
                                     <span class="course-tag best">Melhor opção</span>
-                                    <p class="course-desc">Curso completo em português. Cobre sintaxe, arrays, ponteiros, funções e I/O.</p>
+                                    <p class="course-desc">Dias 25–50: MVVM, APIs, Codable, Core Data.</p>
                                 </li>
                                 <li>
-                                    <strong>De aluno para aluno - Linguagem C</strong> (YouTube)
-                                    <span class="course-tag">Complementar</span>
-                                    <p class="course-desc">Aulas curtas e diretas. Bom para revisar tópicos específicos.</p>
+                                    <strong>Matemática Rio — Raciocínio Lógico</strong>
+                                    <span class="course-tag">Para prova</span>
+                                    <p class="course-desc">Sequências, proposições, diagramas. 30 min/dia em paralelo.</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="step-practice">
-                            <span>Prática:</span> Faça pelo menos 20 exercícios no URI Online Judge (Beecrowd) - seção iniciante.
+                            <span>Entregável:</span> Projeto 2 publicado (4+ telas, API, MVVM, acessibilidade) + simulado lógica 70%+
                         </div>
                     </div>
                 </div>
 
-                <!-- Etapa 3 -->
+                <!-- Fase 3 -->
                 <div class="roadmap-step">
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <div class="step-header">
-                            <h3>Raciocínio Lógico</h3>
-                            <span class="step-duration">~1-2 semanas (paralelo)</span>
+                            <h3>Projeto Principal</h3>
+                            <span class="step-duration">Semanas 12–16</span>
                         </div>
-                        <p class="step-why">Pode estudar junto com as etapas 1 e 2. Dedique 30 min por dia resolvendo questões.</p>
+                        <p class="step-why">O projeto que te diferencia. CBL aplicado de verdade, impacto real, design intencional.</p>
                         <div class="step-courses">
-                            <h4>Cursos recomendados (gratuitos):</h4>
+                            <h4>Recursos:</h4>
                             <ul>
                                 <li>
-                                    <strong>Matemática Rio - Raciocínio Lógico</strong> (YouTube)
-                                    <span class="course-tag best">Melhor opção</span>
-                                    <p class="course-desc">Aulas focadas em concursos. Cobre sequências, proposições, tabelas-verdade e dedução.</p>
+                                    <strong>Apple — Challenge Based Learning Guide</strong>
+                                    <span class="course-tag best">Essencial</span>
+                                    <p class="course-desc">Metodologia oficial. Big Idea → Essential Question → Challenge → Solution.</p>
                                 </li>
                                 <li>
-                                    <strong>Professor Ferretto - Lógica</strong> (YouTube)
-                                    <span class="course-tag">Complementar</span>
-                                    <p class="course-desc">Explicações claras com muitos exemplos resolvidos.</p>
+                                    <strong>Apple — Human Interface Guidelines</strong>
+                                    <span class="course-tag best">Essencial</span>
+                                    <p class="course-desc">Design guidelines oficiais. Diferencial real na Academy.</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="step-practice">
-                            <span>Prática:</span> Resolva questões de concursos anteriores (CESPE/FCC) sobre raciocínio lógico.
+                            <span>Entregável:</span> Projeto principal com CBL + README + vídeo demo + pitch de 3 min
                         </div>
                     </div>
                 </div>
 
-                <!-- Etapa 4 -->
+                <!-- Fase 4 -->
                 <div class="roadmap-step">
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <div class="step-header">
-                            <h3>Orientação a Objetos</h3>
-                            <span class="step-duration">~1-2 semanas</span>
+                            <h3>Polimento Final</h3>
+                            <span class="step-duration">Semanas 17–20</span>
                         </div>
-                        <p class="step-why">Depois de dominar C, aprenda OO. Os conceitos são mais fáceis com base de programação.</p>
+                        <p class="step-why">Portfolio impecável, simulados, preparação completa. Chegar pronto.</p>
                         <div class="step-courses">
-                            <h4>Cursos recomendados (gratuitos):</h4>
-                            <ul>
-                                <li>
-                                    <strong>Curso em Vídeo - POO com Java</strong> (Gustavo Guanabara)
-                                    <span class="course-tag best">Melhor opção</span>
-                                    <p class="course-desc">Explica classes, objetos, herança, encapsulamento e polimorfismo de forma visual. Mesmo sendo Java, os conceitos são universais.</p>
-                                </li>
-                                <li>
-                                    <strong>Código Fonte TV - Pilares da OO</strong> (YouTube)
-                                    <span class="course-tag">Resumo rápido</span>
-                                    <p class="course-desc">Vídeos curtos que explicam cada pilar de OO. Ótimo para revisão.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="step-practice">
-                            <span>Prática:</span> Crie um mini-projeto com classes (ex: sistema de cadastro) para fixar os conceitos.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Etapa 5 -->
-                <div class="roadmap-step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <div class="step-header">
-                            <h3>Preparação para Entrevista</h3>
-                            <span class="step-duration">~1 semana</span>
-                        </div>
-                        <p class="step-why">Depois de estudar o conteúdo técnico, foque na entrevista. Pesquise CBL e prepare suas histórias.</p>
-                        <div class="step-courses">
-                            <h4>Recursos recomendados:</h4>
+                            <h4>Recursos:</h4>
                             <ul>
                                 <li>
                                     <strong>Playlist "Estudos Apple Developer Academy | UCB"</strong> (YouTube)
                                     <span class="course-tag best">Essencial</span>
                                     <p class="course-desc">Dicas de ex-alunos e resoluções de provas anteriores.</p>
                                 </li>
-                                <li>
-                                    <strong>Site oficial Apple - Challenge Based Learning</strong>
-                                    <span class="course-tag">Leitura</span>
-                                    <p class="course-desc">Entenda a metodologia que a Academy usa. Vai te destacar na entrevista.</p>
-                                </li>
                             </ul>
                         </div>
                         <div class="step-practice">
-                            <span>Prática:</span> Faça um "pitch" de 2 min sobre um projeto/ideia sua e treine em voz alta.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Etapa 6 -->
-                <div class="roadmap-step">
-                    <div class="step-number">6</div>
-                    <div class="step-content">
-                        <div class="step-header">
-                            <h3>Diferenciais (Bônus)</h3>
-                            <span class="step-duration">Continuo</span>
-                        </div>
-                        <p class="step-why">Se sobrar tempo, esses conhecimentos extras vão te destacar dos outros candidatos.</p>
-                        <div class="step-courses">
-                            <h4>Recursos recomendados:</h4>
-                            <ul>
-                                <li>
-                                    <strong>Curso em Vídeo - Git e GitHub</strong>
-                                    <span class="course-tag">Diferencial</span>
-                                    <p class="course-desc">20 aulas. Git é essencial no dia a dia da Academy.</p>
-                                </li>
-                                <li>
-                                    <strong>Swift Playgrounds</strong> (app gratuito da Apple)
-                                    <span class="course-tag">Diferencial</span>
-                                    <p class="course-desc">Aprenda Swift de forma interativa no iPad ou Mac. Mostra interesse pelo ecossistema Apple.</p>
-                                </li>
-                            </ul>
+                            <span>Entregável:</span> Portfolio GitHub completo, simulado 80%+, pitch afiado, entrevista simulada
                         </div>
                     </div>
                 </div>
@@ -289,7 +259,7 @@
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                 </div>
                 <div>
-                    <strong>Dica importante:</strong> Não tente estudar tudo ao mesmo tempo. Siga a ordem e só avance quando se sentir confortável com o tópico atual. Consistência (1-2h por dia) é melhor que maratonas esporádicas.
+                    <strong>Regra de ouro:</strong> Projeto > Tutorial. Commit diário. C é meio, não fim. Swift é o core. README é seu pitch escrito.
                 </div>
             </div>
         </section>
@@ -299,351 +269,609 @@
             <div class="kanban-board" id="kanban-board"></div>
         </section>
 
-        <!-- PROVA TECNICA -->
-        <section class="category-section" data-category="prova">
+        <!-- ============================================ -->
+        <!-- FASE 0 — IGNIÇÃO (Semanas 1-2)              -->
+        <!-- ============================================ -->
+        <section class="category-section" data-category="fase0">
             <div class="category-header">
                 <div class="category-title">
-                    <span class="category-badge badge-prova">Eliminatória</span>
-                    <h2>Prova Técnica</h2>
+                    <span class="category-badge badge-prova">Sem 1–2</span>
+                    <h2>Fase 0 — Ignição</h2>
                 </div>
                 <div class="category-progress">
                     <div class="progress-bar">
-                        <div class="progress-bar-fill" id="provaProgress"></div>
+                        <div class="progress-bar-fill" id="fase0Progress"></div>
                     </div>
-                    <span class="progress-percent" id="provaPercent">0%</span>
+                    <span class="progress-percent" id="fase0Percent">0%</span>
                 </div>
             </div>
 
-            <!-- Etapa 1: Lógica de Programação -->
-            <div class="topic-card" data-topic="logica" data-step="1">
+            <div class="topic-card" data-topic="swift-basico" data-step="1">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-1">Etapa 1</span>
+                        <span class="step-badge step-1">Sem 1–2</span>
                         <div class="topic-icon">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                         </div>
                         <div>
-                            <h3>Lógica de Programação</h3>
-                            <p class="topic-description">Comece aqui! Algoritmos, estruturas de controle, variáveis e funções</p>
+                            <h3>Swift Básico + Git</h3>
+                            <p class="topic-description">Primeiro contato com Swift, SwiftUI e controle de versão</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="logica-badge">0/7</span>
+                        <span class="topic-progress-badge" id="swift-basico-badge">0/8</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="logica-list">
-                        <li class="checklist-item" data-id="lp-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar fundamentos de algoritmos</span></label>
+                    <ul class="checklist" id="swift-basico-list">
+                        <li class="checklist-item" data-id="sw-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Instalar Xcode e Swift Playgrounds</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lp-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar variáveis e tipos de dados</span></label>
+                        <li class="checklist-item" data-id="sw-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Variáveis, tipos e condicionais em Swift</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lp-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar operadores (aritméticos, lógicos, relacionais)</span></label>
+                        <li class="checklist-item" data-id="sw-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Loops e controle de fluxo em Swift</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lp-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar condicionais (if/else, switch)</span></label>
+                        <li class="checklist-item" data-id="sw-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Funções, arrays e dicionários em Swift</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lp-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar laços de repetição (for, while, do-while)</span></label>
+                        <li class="checklist-item" data-id="sw-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Construir mini-app Contador em SwiftUI</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lp-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar e usar funções/procedimentos</span></label>
+                        <li class="checklist-item" data-id="sw-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Construir mini-app Lista de Tarefas em SwiftUI</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lp-7">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver desafios no HackerRank/LeetCode (nível iniciante)</span></label>
+                        <li class="checklist-item" data-id="sw-7">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Git: init, add, commit, push — criar repo GitHub</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sw-8">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Documentar mini-apps com README no GitHub</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FASE 1 — FUNDAÇÃO SWIFT (Semanas 3-6)       -->
+        <!-- ============================================ -->
+        <section class="category-section" data-category="fase1">
+            <div class="category-header">
+                <div class="category-title">
+                    <span class="category-badge badge-prova">Sem 3–6</span>
+                    <h2>Fase 1 — Fundação Swift</h2>
+                </div>
+                <div class="category-progress">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="fase1Progress"></div>
+                    </div>
+                    <span class="progress-percent" id="fase1Percent">0%</span>
+                </div>
+            </div>
+
+            <!-- SwiftUI Básico -->
+            <div class="topic-card" data-topic="swiftui-basico" data-step="2">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-2">Sem 3–4</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                        </div>
+                        <div>
+                            <h3>SwiftUI Básico</h3>
+                            <p class="topic-description">Layouts, navegação, estado e formulários</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="swiftui-basico-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="swiftui-basico-list">
+                        <li class="checklist-item" data-id="sui-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Stacks (VStack, HStack, ZStack) e layouts</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sui-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">NavigationView e NavigationLink</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sui-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Listas, ForEach e modificadores visuais</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sui-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">@State, @Binding e gerenciamento de estado</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sui-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Formulários (Form, TextField, Toggle, Picker)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sui-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Closures e funções avançadas em Swift</span></label>
                             <span class="priority medium">Media</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Etapa 2: Linguagem C -->
-            <div class="topic-card" data-topic="linguagemc" data-step="2">
+            <!-- Projeto 1 -->
+            <div class="topic-card" data-topic="projeto1" data-step="2">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-2">Etapa 2</span>
+                        <span class="step-badge step-3">Sem 5–6</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Projeto 1 — Publicar</h3>
+                            <p class="topic-description">Habit Tracker, Study Timer ou Flashcards — 3+ telas com persistência</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="projeto1-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="projeto1-list">
+                        <li class="checklist-item" data-id="p1-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Definir escopo do Projeto 1 (wireframe em papel)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p1-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar persistência (UserDefaults / @AppStorage)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p1-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar navegação e fluxo completo (3+ telas)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p1-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Polish visual seguindo Human Interface Guidelines</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p1-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar README profissional com screenshots</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p1-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Publicar Projeto 1 no GitHub</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- C Essencial -->
+            <div class="topic-card" data-topic="c-essencial" data-step="2">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-4">Paralelo</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                         </div>
                         <div>
-                            <h3>Linguagem C</h3>
-                            <p class="topic-description">Sintaxe, arrays, ponteiros, I/O e funções</p>
+                            <h3>C Essencial para Prova</h3>
+                            <p class="topic-description">Só o necessário: sintaxe, arrays, funções — não aprofundar</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="linguagemc-badge">0/7</span>
+                        <span class="topic-progress-badge" id="c-essencial-badge">0/4</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="linguagemc-list">
-                        <li class="checklist-item" data-id="lc-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar sintaxe básica de C (estrutura de um programa)</span></label>
+                    <ul class="checklist" id="c-essencial-list">
+                        <li class="checklist-item" data-id="ce-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Sintaxe básica de C (printf, scanf, variáveis, tipos)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lc-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Declaração de variáveis e tipos (int, float, char, etc.)</span></label>
+                        <li class="checklist-item" data-id="ce-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Arrays e strings em C</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lc-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar entrada/saída (scanf, printf)</span></label>
+                        <li class="checklist-item" data-id="ce-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Funções em C com parâmetros e retorno</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lc-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Trabalhar com arrays (vetores e matrizes)</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="lc-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entender ponteiros (conceitos básicos)</span></label>
+                        <li class="checklist-item" data-id="ce-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver 10 exercícios básicos de C</span></label>
                             <span class="priority medium">Media</span>
                         </li>
-                        <li class="checklist-item" data-id="lc-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar funções em C com parâmetros e retorno</span></label>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FASE 2 — CONSTRUÇÃO (Semanas 7-11)          -->
+        <!-- ============================================ -->
+        <section class="category-section" data-category="fase2">
+            <div class="category-header">
+                <div class="category-title">
+                    <span class="category-badge badge-entrevista">Sem 7–11</span>
+                    <h2>Fase 2 — Construção</h2>
+                </div>
+                <div class="category-progress">
+                    <div class="progress-bar">
+                        <div class="progress-bar-fill" id="fase2Progress"></div>
+                    </div>
+                    <span class="progress-percent" id="fase2Percent">0%</span>
+                </div>
+            </div>
+
+            <!-- Swift + SwiftUI Intermediário -->
+            <div class="topic-card" data-topic="swift-avancado" data-step="3">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-1">Sem 7–9</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <div>
+                            <h3>Swift + SwiftUI Intermediário</h3>
+                            <p class="topic-description">OO em Swift, MVVM, APIs, persistência avançada, animações</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="swift-avancado-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="swift-avancado-list">
+                        <li class="checklist-item" data-id="sa-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Classes vs Structs, protocolos e extensions em Swift</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="lc-7">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver exercícios práticos em C</span></label>
+                        <li class="checklist-item" data-id="sa-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">MVVM pattern em SwiftUI</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sa-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">URLSession — consumir API REST</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sa-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">JSON decoding com Codable + async/await</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="sa-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Core Data ou SwiftData (persistência robusta)</span></label>
+                            <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="sa-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Animações em SwiftUI (.animation, withAnimation)</span></label>
                             <span class="priority medium">Media</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Etapa 3: Raciocínio Lógico -->
-            <div class="topic-card" data-topic="raciocinio" data-step="3">
+            <!-- Projeto 2 -->
+            <div class="topic-card" data-topic="projeto2" data-step="3">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-3">Etapa 3</span>
+                        <span class="step-badge step-2">Sem 8–10</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Projeto 2 — Publicar</h3>
+                            <p class="topic-description">Weather App, Recipe Book ou Expense Tracker — 4+ telas com API</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="projeto2-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="projeto2-list">
+                        <li class="checklist-item" data-id="p2-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Definir escopo e criar estrutura MVVM</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p2-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Integrar API externa ou dados complexos</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p2-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar persistência robusta</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p2-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Adicionar acessibilidade (VoiceOver, Dynamic Type)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p2-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar README profissional com screenshots</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="p2-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Publicar Projeto 2 no GitHub</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Preparação para Prova -->
+            <div class="topic-card" data-topic="prova-prep" data-step="3">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-3">Paralelo</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                         </div>
                         <div>
-                            <h3>Raciocínio Lógico</h3>
-                            <p class="topic-description">Sequências, diagramas lógicos, proposições e dedução</p>
+                            <h3>Preparação para Prova</h3>
+                            <p class="topic-description">C avançado + raciocínio lógico — o que cai na prova</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="raciocinio-badge">0/6</span>
+                        <span class="topic-progress-badge" id="prova-prep-badge">0/5</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="raciocinio-list">
-                        <li class="checklist-item" data-id="rl-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar sequências numéricas e lógicas</span></label>
+                    <ul class="checklist" id="prova-prep-list">
+                        <li class="checklist-item" data-id="pp-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">C: ponteiros e alocação dinâmica</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="rl-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar proposições e conectivos lógicos</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="rl-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar diagramas lógicos (Venn, tabelas-verdade)</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="rl-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver problemas de dedução lógica</span></label>
+                        <li class="checklist-item" data-id="pp-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">C: structs e recursão</span></label>
                             <span class="priority medium">Media</span>
                         </li>
-                        <li class="checklist-item" data-id="rl-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver questões de concursos (raciocínio lógico)</span></label>
+                        <li class="checklist-item" data-id="pp-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Raciocínio lógico: sequências e proposições</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="rl-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Fazer testes de QI e lógica online</span></label>
-                            <span class="priority low">Baixa</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Etapa 4: Orientação a Objetos -->
-            <div class="topic-card" data-topic="oo" data-step="4">
-                <div class="topic-header" onclick="toggleTopic(this)">
-                    <div class="topic-info">
-                        <span class="step-badge step-4">Etapa 4</span>
-                        <div class="topic-icon">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                        </div>
-                        <div>
-                            <h3>Orientação a Objetos</h3>
-                            <p class="topic-description">Classes, objetos, encapsulamento, herança e polimorfismo</p>
-                        </div>
-                    </div>
-                    <div class="topic-meta">
-                        <span class="topic-progress-badge" id="oo-badge">0/6</span>
-                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
-                </div>
-                <div class="topic-content">
-                    <ul class="checklist" id="oo-list">
-                        <li class="checklist-item" data-id="oo-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entender conceito de classes e objetos</span></label>
+                        <li class="checklist-item" data-id="pp-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Raciocínio lógico: diagramas e dedução</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="oo-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar atributos (propriedades) e métodos</span></label>
+                        <li class="checklist-item" data-id="pp-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simulado de raciocínio lógico (meta: 70%+)</span></label>
                             <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="oo-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Compreender encapsulamento (public, private, protected)</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="oo-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar herança (extends, super)</span></label>
-                            <span class="priority medium">Media</span>
-                        </li>
-                        <li class="checklist-item" data-id="oo-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entender polimorfismo (sobrescrita e sobrecarga)</span></label>
-                            <span class="priority medium">Media</span>
-                        </li>
-                        <li class="checklist-item" data-id="oo-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar OO em Java, Python ou Swift</span></label>
-                            <span class="priority medium">Media</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- ENTREVISTA -->
-        <section class="category-section" data-category="entrevista">
+        <!-- ============================================ -->
+        <!-- FASE 3 — PROJETO PRINCIPAL (Semanas 12-16)  -->
+        <!-- ============================================ -->
+        <section class="category-section" data-category="fase3">
             <div class="category-header">
                 <div class="category-title">
-                    <span class="category-badge badge-entrevista">Classificatória</span>
-                    <h2>Entrevista</h2>
+                    <span class="category-badge badge-recursos">Sem 12–16</span>
+                    <h2>Fase 3 — Projeto Principal</h2>
                 </div>
                 <div class="category-progress">
                     <div class="progress-bar">
-                        <div class="progress-bar-fill" id="entrevistaProgress"></div>
+                        <div class="progress-bar-fill" id="fase3Progress"></div>
                     </div>
-                    <span class="progress-percent" id="entrevistaPercent">0%</span>
+                    <span class="progress-percent" id="fase3Percent">0%</span>
                 </div>
             </div>
 
-            <!-- Etapa 5: Preparação para Entrevista -->
-            <div class="topic-card" data-topic="criatividade" data-step="5">
+            <!-- CBL + Design -->
+            <div class="topic-card" data-topic="cbl-design" data-step="4">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-5">Etapa 5</span>
+                        <span class="step-badge step-5">Sem 12–13</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
                         </div>
                         <div>
-                            <h3>Preparação para Entrevista</h3>
-                            <p class="topic-description">Criatividade, colaboração, CBL e empreendedorismo</p>
+                            <h3>CBL + Design Thinking</h3>
+                            <p class="topic-description">Descobrir problema real, entrevistar pessoas, documentar processo</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="criatividade-badge">0/8</span>
+                        <span class="topic-progress-badge" id="cbl-design-badge">0/5</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="criatividade-list">
-                        <li class="checklist-item" data-id="ent-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar portfólio de projetos/ideias pessoais</span></label>
+                    <ul class="checklist" id="cbl-design-list">
+                        <li class="checklist-item" data-id="cd-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar CBL: Big Idea → Essential Question → Challenge</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="ent-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar como explicar abordagem de resolução de problemas</span></label>
+                        <li class="checklist-item" data-id="cd-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Escolher problema real e entrevistar 3–5 pessoas</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="ent-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar exemplos de trabalho em equipe e liderança</span></label>
+                        <li class="checklist-item" data-id="cd-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Documentar processo CBL completo</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="ent-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar exemplos de resolução de conflitos em grupo</span></label>
-                            <span class="priority medium">Media</span>
-                        </li>
-                        <li class="checklist-item" data-id="ent-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Pesquisar a metodologia Challenge Based Learning (CBL)</span></label>
+                        <li class="checklist-item" data-id="cd-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar wireframe completo (Figma ou papel)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="ent-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Conhecer projetos desenvolvidos na Academy e valores do programa</span></label>
+                        <li class="checklist-item" data-id="cd-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Definir arquitetura do app (models, views, viewmodels)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="ent-7">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Preparar pitch de empreendedorismo (ideia -> realidade)</span></label>
-                            <span class="priority medium">Media</span>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Projeto Principal -->
+            <div class="topic-card" data-topic="projeto-principal" data-step="4">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-6">Sem 14–16</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <div>
+                            <h3>Projeto Principal — O Diferencial</h3>
+                            <p class="topic-description">5+ telas, APIs Apple, acessibilidade, HIG, README CBL, vídeo demo</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="projeto-principal-badge">0/7</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="projeto-principal-list">
+                        <li class="checklist-item" data-id="pm-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar core features (2–3 funcionalidades principais)</span></label>
+                            <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="ent-8">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisar tópicos técnicos para possível abordagem na entrevista</span></label>
-                            <span class="priority medium">Media</span>
+                        <li class="checklist-item" data-id="pm-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Integrar APIs Apple (MapKit, CoreLocation, Notifications, etc.)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pm-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Polish visual seguindo HIG (SF Symbols, cores semânticas)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pm-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar acessibilidade completa (VoiceOver, Dynamic Type)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pm-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar README formato CBL com screenshots/GIFs</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pm-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Gravar vídeo demo de 1 minuto</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pm-7">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar pitch de 3 minutos</span></label>
+                            <span class="priority high">Alta</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- RECURSOS ADICIONAIS -->
-        <section class="category-section" data-category="recursos">
+        <!-- ============================================ -->
+        <!-- FASE 4 — POLIMENTO FINAL (Semanas 17-20)    -->
+        <!-- ============================================ -->
+        <section class="category-section" data-category="fase4">
             <div class="category-header">
                 <div class="category-title">
-                    <span class="category-badge badge-recursos">Diferencial</span>
-                    <h2>Recursos Adicionais</h2>
+                    <span class="category-badge badge-entrevista">Sem 17–20</span>
+                    <h2>Fase 4 — Polimento Final</h2>
                 </div>
                 <div class="category-progress">
                     <div class="progress-bar">
-                        <div class="progress-bar-fill" id="recursosProgress"></div>
+                        <div class="progress-bar-fill" id="fase4Progress"></div>
                     </div>
-                    <span class="progress-percent" id="recursosPercent">0%</span>
+                    <span class="progress-percent" id="fase4Percent">0%</span>
                 </div>
             </div>
 
-            <div class="topic-card" data-topic="extras" data-step="6">
+            <!-- Portfolio + Simulados -->
+            <div class="topic-card" data-topic="portfolio" data-step="5">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-6">Etapa 6</span>
+                        <span class="step-badge step-5">Sem 17–18</span>
                         <div class="topic-icon">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                         </div>
                         <div>
-                            <h3>Conhecimentos Extras</h3>
-                            <p class="topic-description">Git/GitHub, Scrum, Swift e ecossistema Apple</p>
+                            <h3>Portfolio + Simulados</h3>
+                            <p class="topic-description">GitHub profile, revisão de projetos, simulado de prova 80%+</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="extras-badge">0/6</span>
+                        <span class="topic-progress-badge" id="portfolio-badge">0/5</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="extras-list">
-                        <li class="checklist-item" data-id="ext-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Assistir playlist "Estudos Apple Developer Academy | UCB" no YouTube</span></label>
+                    <ul class="checklist" id="portfolio-list">
+                        <li class="checklist-item" data-id="pf-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar GitHub profile README profissional</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pf-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisar e polir todos os projetos (links, screenshots)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pf-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simulado de prova técnica cronometrado (meta: 80%+)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pf-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisão intensiva de C para prova</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pf-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisão de raciocínio lógico para prova</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Preparação de Entrevista -->
+            <div class="topic-card" data-topic="entrevista-final" data-step="5">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-6">Sem 19–20</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h3>Preparação de Entrevista</h3>
+                            <p class="topic-description">Pitch, simulação, dinâmica de grupo, reflexão final</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="entrevista-final-badge">0/6</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="entrevista-final-list">
+                        <li class="checklist-item" data-id="ef-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Escrever respostas para 10 perguntas comuns da entrevista</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ef-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Gravar e revisar pitch do projeto principal (3 min)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ef-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simular entrevista com amigo/familiar</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ef-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simular dinâmica de grupo (problema → solução em 15 min)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ef-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Verificar: GitHub público, links funcionam, READMEs ok</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ef-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Escrever reflexão "O que aprendi nessa jornada"</span></label>
                             <span class="priority medium">Media</span>
-                        </li>
-                        <li class="checklist-item" data-id="ext-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aprender conceitos básicos de Git e GitHub</span></label>
-                            <span class="priority medium">Media</span>
-                        </li>
-                        <li class="checklist-item" data-id="ext-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar metodologia Scrum (sprints, daily, review, retro)</span></label>
-                            <span class="priority low">Baixa</span>
-                        </li>
-                        <li class="checklist-item" data-id="ext-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Introduzir-se à linguagem Swift (básico)</span></label>
-                            <span class="priority low">Baixa</span>
-                        </li>
-                        <li class="checklist-item" data-id="ext-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Conhecer o ecossistema Apple (Xcode, SwiftUI, UIKit)</span></label>
-                            <span class="priority low">Baixa</span>
-                        </li>
-                        <li class="checklist-item" data-id="ext-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Seguir @academyucb no Instagram para atualizações</span></label>
-                            <span class="priority low">Baixa</span>
                         </li>
                     </ul>
                 </div>
@@ -692,95 +920,32 @@
                 </div>
                 <div class="topic-content">
                     <ul class="checklist" id="ingles-m1-list">
-                        <li class="checklist-item" data-id="en1-01">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 01 — Boas Vindas + Alphabet</span></label>
-                            <span class="duration">47 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-02">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 02 — Alphabet + Spelling</span></label>
-                            <span class="duration">34 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-03">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 03 — Spelling and Speaking</span></label>
-                            <span class="duration">35 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-04">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 04 — Verb To Be</span></label>
-                            <span class="duration">47 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-05">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 05 — Verb To Be 2</span></label>
-                            <span class="duration">34 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-06">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 06 — Song Exercises</span></label>
-                            <span class="duration">35 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-07">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 07 — Pronouns (Explicando)</span></label>
-                            <span class="duration">21 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-08">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 08 — Pronouns (Exercise)</span></label>
-                            <span class="duration">25 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-09">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 09 — Prepositions</span></label>
-                            <span class="duration">17 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-10">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 10 — Prepositions 2</span></label>
-                            <span class="duration">15 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-11">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 11 — Prepositions 3</span></label>
-                            <span class="duration">17 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-12">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 12 — Preposition List</span></label>
-                            <span class="duration">37 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-13">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 13 — Prepositions Final</span></label>
-                            <span class="duration">30 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-14">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 14 — Verbs (Present & Infinitive)</span></label>
-                            <span class="duration">48 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-15">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 15 — Verbs (Simple Past & Future)</span></label>
-                            <span class="duration">38 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-16">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 16 — Verbs (Present Perfect & Present Perfect Continuous)</span></label>
-                            <span class="duration">35 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-17">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 17 — Verbs (Present & Past Continuous)</span></label>
-                            <span class="duration">30 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-18">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 18 — Verb List / Exercises</span></label>
-                            <span class="duration">45 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-19">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 19 — Exercises - Song</span></label>
-                            <span class="duration">30 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-20">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 20 — Daily Routine Verbs</span></label>
-                            <span class="duration">34 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en1-21">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 21 — Writing Your Daily Routine</span></label>
-                            <span class="duration"></span>
-                        </li>
+                        <li class="checklist-item" data-id="en1-01"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 01 — Boas Vindas + Alphabet</span></label><span class="duration">47 min</span></li>
+                        <li class="checklist-item" data-id="en1-02"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 02 — Alphabet + Spelling</span></label><span class="duration">34 min</span></li>
+                        <li class="checklist-item" data-id="en1-03"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 03 — Spelling and Speaking</span></label><span class="duration">35 min</span></li>
+                        <li class="checklist-item" data-id="en1-04"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 04 — Verb To Be</span></label><span class="duration">47 min</span></li>
+                        <li class="checklist-item" data-id="en1-05"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 05 — Verb To Be 2</span></label><span class="duration">34 min</span></li>
+                        <li class="checklist-item" data-id="en1-06"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 06 — Song Exercises</span></label><span class="duration">35 min</span></li>
+                        <li class="checklist-item" data-id="en1-07"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 07 — Pronouns (Explicando)</span></label><span class="duration">21 min</span></li>
+                        <li class="checklist-item" data-id="en1-08"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 08 — Pronouns (Exercise)</span></label><span class="duration">25 min</span></li>
+                        <li class="checklist-item" data-id="en1-09"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 09 — Prepositions</span></label><span class="duration">17 min</span></li>
+                        <li class="checklist-item" data-id="en1-10"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 10 — Prepositions 2</span></label><span class="duration">15 min</span></li>
+                        <li class="checklist-item" data-id="en1-11"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 11 — Prepositions 3</span></label><span class="duration">17 min</span></li>
+                        <li class="checklist-item" data-id="en1-12"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 12 — Preposition List</span></label><span class="duration">37 min</span></li>
+                        <li class="checklist-item" data-id="en1-13"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 13 — Prepositions Final</span></label><span class="duration">30 min</span></li>
+                        <li class="checklist-item" data-id="en1-14"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 14 — Verbs (Present & Infinitive)</span></label><span class="duration">48 min</span></li>
+                        <li class="checklist-item" data-id="en1-15"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 15 — Verbs (Simple Past & Future)</span></label><span class="duration">38 min</span></li>
+                        <li class="checklist-item" data-id="en1-16"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 16 — Verbs (Present Perfect & Present Perfect Continuous)</span></label><span class="duration">35 min</span></li>
+                        <li class="checklist-item" data-id="en1-17"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 17 — Verbs (Present & Past Continuous)</span></label><span class="duration">30 min</span></li>
+                        <li class="checklist-item" data-id="en1-18"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 18 — Verb List / Exercises</span></label><span class="duration">45 min</span></li>
+                        <li class="checklist-item" data-id="en1-19"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 19 — Exercises - Song</span></label><span class="duration">30 min</span></li>
+                        <li class="checklist-item" data-id="en1-20"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 20 — Daily Routine Verbs</span></label><span class="duration">34 min</span></li>
+                        <li class="checklist-item" data-id="en1-21"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 21 — Writing Your Daily Routine</span></label><span class="duration"></span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Módulo 2 - A ser adicionado -->
+            <!-- Módulo 2 - Intermediário -->
             <div class="topic-card" data-topic="ingles-m2" data-step="0">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
@@ -800,79 +965,28 @@
                 </div>
                 <div class="topic-content">
                     <ul class="checklist" id="ingles-m2-list">
-                        <li class="checklist-item" data-id="en2-01">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 01 — Welcome + Review</span></label>
-                            <span class="duration">33 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-02">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 02 — Numbers & Communication</span></label>
-                            <span class="duration">35 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-03">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 03 — Do/Does Have/Has (Interrogative)</span></label>
-                            <span class="duration">21 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-04">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 04 — Do/Does Have/Has (Exercises)</span></label>
-                            <span class="duration">24 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-05">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 05 — Modal Verbs</span></label>
-                            <span class="duration">48 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-06">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 06 — Modal Verbs (Talking about Life)</span></label>
-                            <span class="duration">28 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-07">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 07 — What is "To Get"?</span></label>
-                            <span class="duration">35 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-08">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 08 — To Get (Song Lyrics Exercise)</span></label>
-                            <span class="duration">22 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-09">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 09 — To Get (Phrasal Verbs)</span></label>
-                            <span class="duration">31 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-10">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 10 — Comparatives and Superlatives</span></label>
-                            <span class="duration">28 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-11">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 11 — Demonstrative Pronouns (This, That)</span></label>
-                            <span class="duration">32 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-12">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 12 — Indefinite Pronouns (1)</span></label>
-                            <span class="duration">37 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-13">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 13 — Indefinite Pronouns (2)</span></label>
-                            <span class="duration">31 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-14">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 14 — Relative Pronouns</span></label>
-                            <span class="duration">21 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-15">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 15 — Slang Expression (Ain't)</span></label>
-                            <span class="duration">24 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-16">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 16 — Text Interpretation</span></label>
-                            <span class="duration">38 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en2-17">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 17 — Trip Vocabulary / Phone Call</span></label>
-                            <span class="duration">4 min</span>
-                        </li>
+                        <li class="checklist-item" data-id="en2-01"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 01 — Welcome + Review</span></label><span class="duration">33 min</span></li>
+                        <li class="checklist-item" data-id="en2-02"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 02 — Numbers & Communication</span></label><span class="duration">35 min</span></li>
+                        <li class="checklist-item" data-id="en2-03"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 03 — Do/Does Have/Has (Interrogative)</span></label><span class="duration">21 min</span></li>
+                        <li class="checklist-item" data-id="en2-04"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 04 — Do/Does Have/Has (Exercises)</span></label><span class="duration">24 min</span></li>
+                        <li class="checklist-item" data-id="en2-05"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 05 — Modal Verbs</span></label><span class="duration">48 min</span></li>
+                        <li class="checklist-item" data-id="en2-06"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 06 — Modal Verbs (Talking about Life)</span></label><span class="duration">28 min</span></li>
+                        <li class="checklist-item" data-id="en2-07"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 07 — What is "To Get"?</span></label><span class="duration">35 min</span></li>
+                        <li class="checklist-item" data-id="en2-08"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 08 — To Get (Song Lyrics Exercise)</span></label><span class="duration">22 min</span></li>
+                        <li class="checklist-item" data-id="en2-09"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 09 — To Get (Phrasal Verbs)</span></label><span class="duration">31 min</span></li>
+                        <li class="checklist-item" data-id="en2-10"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 10 — Comparatives and Superlatives</span></label><span class="duration">28 min</span></li>
+                        <li class="checklist-item" data-id="en2-11"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 11 — Demonstrative Pronouns (This, That)</span></label><span class="duration">32 min</span></li>
+                        <li class="checklist-item" data-id="en2-12"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 12 — Indefinite Pronouns (1)</span></label><span class="duration">37 min</span></li>
+                        <li class="checklist-item" data-id="en2-13"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 13 — Indefinite Pronouns (2)</span></label><span class="duration">31 min</span></li>
+                        <li class="checklist-item" data-id="en2-14"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 14 — Relative Pronouns</span></label><span class="duration">21 min</span></li>
+                        <li class="checklist-item" data-id="en2-15"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 15 — Slang Expression (Ain't)</span></label><span class="duration">24 min</span></li>
+                        <li class="checklist-item" data-id="en2-16"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 16 — Text Interpretation</span></label><span class="duration">38 min</span></li>
+                        <li class="checklist-item" data-id="en2-17"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 17 — Trip Vocabulary / Phone Call</span></label><span class="duration">4 min</span></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Módulo 3 - A ser adicionado -->
+            <!-- Módulo 3 - Avançado -->
             <div class="topic-card" data-topic="ingles-m3" data-step="0">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
@@ -892,34 +1006,13 @@
                 </div>
                 <div class="topic-content">
                     <ul class="checklist" id="ingles-m3-list">
-                        <li class="checklist-item" data-id="en3-01">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 01 — Welcome + Review</span></label>
-                            <span class="duration">27 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en3-02">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 02 — Informal Contractions</span></label>
-                            <span class="duration">35 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en3-03">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 03 — Phrasal Verbs</span></label>
-                            <span class="duration">18 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en3-04">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 04 — Slang Expressions</span></label>
-                            <span class="duration">25 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en3-05">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 05 — Accents (Sotaques)</span></label>
-                            <span class="duration">33 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en3-06">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 06 — Filler Words</span></label>
-                            <span class="duration">45 min</span>
-                        </li>
-                        <li class="checklist-item" data-id="en3-07">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 07 — Party Q's (Conversation — Only in English)</span></label>
-                            <span class="duration">18 min</span>
-                        </li>
+                        <li class="checklist-item" data-id="en3-01"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 01 — Welcome + Review</span></label><span class="duration">27 min</span></li>
+                        <li class="checklist-item" data-id="en3-02"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 02 — Informal Contractions</span></label><span class="duration">35 min</span></li>
+                        <li class="checklist-item" data-id="en3-03"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 03 — Phrasal Verbs</span></label><span class="duration">18 min</span></li>
+                        <li class="checklist-item" data-id="en3-04"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 04 — Slang Expressions</span></label><span class="duration">25 min</span></li>
+                        <li class="checklist-item" data-id="en3-05"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 05 — Accents (Sotaques)</span></label><span class="duration">33 min</span></li>
+                        <li class="checklist-item" data-id="en3-06"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 06 — Filler Words</span></label><span class="duration">45 min</span></li>
+                        <li class="checklist-item" data-id="en3-07"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Aula 07 — Party Q's (Conversation — Only in English)</span></label><span class="duration">18 min</span></li>
                     </ul>
                 </div>
             </div>
@@ -965,42 +1058,15 @@
                         </a>
                     </div>
                     <ul class="checklist" id="livro-list">
-                        <li class="checklist-item" data-id="liv-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 1 — Introdução a algoritmos (pesquisa binária)</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 2 — Ordenação por seleção (arrays e listas)</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 3 — Recursão</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 4 — Quicksort (dividir para conquistar)</span></label>
-                            <span class="priority medium">Média</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 5 — Tabelas hash</span></label>
-                            <span class="priority medium">Média</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 6 — Pesquisa em largura (grafos)</span></label>
-                            <span class="priority medium">Média</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-7">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 7 — Algoritmo de Dijkstra</span></label>
-                            <span class="priority low">Baixa</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-8">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 8 — Algoritmos gulosos</span></label>
-                            <span class="priority low">Baixa</span>
-                        </li>
-                        <li class="checklist-item" data-id="liv-9">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 9 — Programação dinâmica</span></label>
-                            <span class="priority low">Baixa</span>
-                        </li>
+                        <li class="checklist-item" data-id="liv-1"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 1 — Introdução a algoritmos (pesquisa binária)</span></label><span class="priority high">Alta</span></li>
+                        <li class="checklist-item" data-id="liv-2"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 2 — Ordenação por seleção (arrays e listas)</span></label><span class="priority high">Alta</span></li>
+                        <li class="checklist-item" data-id="liv-3"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 3 — Recursão</span></label><span class="priority high">Alta</span></li>
+                        <li class="checklist-item" data-id="liv-4"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 4 — Quicksort (dividir para conquistar)</span></label><span class="priority medium">Média</span></li>
+                        <li class="checklist-item" data-id="liv-5"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 5 — Tabelas hash</span></label><span class="priority medium">Média</span></li>
+                        <li class="checklist-item" data-id="liv-6"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 6 — Pesquisa em largura (grafos)</span></label><span class="priority medium">Média</span></li>
+                        <li class="checklist-item" data-id="liv-7"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 7 — Algoritmo de Dijkstra</span></label><span class="priority low">Baixa</span></li>
+                        <li class="checklist-item" data-id="liv-8"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 8 — Algoritmos gulosos</span></label><span class="priority low">Baixa</span></li>
+                        <li class="checklist-item" data-id="liv-9"><label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Cap. 9 — Programação dinâmica</span></label><span class="priority low">Baixa</span></li>
                     </ul>
                 </div>
             </div>
