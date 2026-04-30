@@ -1,8 +1,9 @@
 # Plano Acelerado — Apple Developer Academy UCB
 
 > **Prazo:** 20 semanas (maio → setembro 2026)
-> **Meta:** Chegar no processo seletivo com base sólida, 2–4 projetos publicados e 1 projeto forte com diferencial.
-> **Princípio:** Construir > Estudar. Cada semana produz algo concreto.
+> **Meta:** 2–4 projetos publicados, 1 projeto forte com diferencial, base sólida para prova e entrevista.
+> **Eixo principal:** Curso iOS Developer (Tiago Aguiar) — não seguir tutoriais avulsos.
+> **Princípio:** Construir > Estudar. Cada semana produz algo funcional.
 
 ---
 
@@ -10,11 +11,33 @@
 
 | Fase | Semanas | Foco | Entregáveis |
 |------|---------|------|-------------|
-| **0 — Ignição** | 1–2 | Swift + Lógica + Git desde o dia 1 | 2 mini-apps no Playgrounds |
-| **1 — Fundação Swift** | 3–6 | SwiftUI + Lógica aplicada + C essencial | Projeto 1 publicado no GitHub |
-| **2 — Construção** | 7–11 | SwiftUI intermediário + OO + C para prova | Projeto 2 publicado |
-| **3 — Projeto Principal** | 12–16 | CBL + UX + App diferencial | Projeto principal funcional |
+| **0 — Ignição** | 1–2 | Curso Tiago (Mód 1-4) + Lógica em Swift + Git | 2 mini-apps pessoais no GitHub |
+| **1 — Primeiro App** | 3–6 | Curso Tiago (Mód 5-7) + Projeto 1 real | Projeto 1 publicado no GitHub |
+| **2 — Evolução** | 7–11 | Curso Tiago (Mód 8-10) + C/Lógica + Projeto 2 + Ideação CBL | Projeto 2 publicado + problema CBL definido |
+| **3 — Projeto Principal** | 12–16 | CBL + UX + App diferencial | Projeto principal completo |
 | **4 — Polimento** | 17–20 | Portfolio + Simulados + Entrevista | Tudo pronto para o processo |
+
+---
+
+## Recursos e Como Usar
+
+### Curso iOS Developer (Tiago Aguiar) — EIXO PRINCIPAL
+Seguir os módulos na ordem. É o que guia seu aprendizado de SwiftUI.
+Não precisa de outro curso de SwiftUI em paralelo.
+
+### Curso de Swift (Tiago Aguiar) — SUPORTE SOB DEMANDA
+**NÃO seguir linearmente.** Consultar quando o curso iOS pedir um conceito que você não entende.
+
+| Estudar AGORA (Fase 0-1) | Sob demanda (quando precisar) | IGNORAR por agora |
+|--------------------------|-------------------------------|-------------------|
+| Variáveis, tipos, optionals | Protocols e extensions | Generics avançados |
+| Collections (Array, Dict) | Error handling (try/catch) | Operator overloading |
+| Control flow (if, for, while) | Enums com associated values | Memory management (ARC) |
+| Functions e parâmetros | Property observers (didSet) | Subscripts |
+| Closures (básico) | Async/await | Protocol-oriented avançado |
+| Structs vs Classes (básico) | | |
+
+### SwiftUI com Firebase — BÔNUS (Fase 3, se o projeto principal precisar de backend)
 
 ---
 
@@ -22,434 +45,337 @@
 
 ```
 Semana:  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20
+Curso:   ████████████████████████████████████████████░░░░░░░░░░░░░░░░░░░
 Swift:   ████████████████████████████████████████████████████████████████
-SwiftUI: ░░░░████████████████████████████████████████████████░░░░░░░░░░░
-C:       ░░░░░░░░░░████████████████████░░░░░░░░░░░░░░░░░░░░████░░░░░░░░
-Lógica:  ████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-OO:      ░░░░░░░░░░░░░░░░░░░░████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+Projeto: ░░░░████████████████████████████████████████████████████████████
+C:       ░░░░░░░░░░░░░░░░░░░░████████████░░░░░░░░░░░░░░░░░░████░░░░░░░
+Lógica:  ████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+R.Lóg:   ░░░░░░░░░░░░░░░░░░░░░░░░████████████░░░░░░░░░░░░░░░░░░░░░░░░░
 Git:     ████████████████████████████████████████████████████████████████
-Design:  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░████████████████████████████████
-CBL:     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░████████████████░░░░░░░░░░░
-Projeto: ░░░░░░░░████████████████████████████████████████████████████████
+CBL:     ░░░░░░░░░░░░░░░░░░░░░░░░░░░░████████████████████░░░░░░░░░░░░░
+Design:  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░████████████████████████████░░
 ```
 
 ---
 
 ## FASE 0 — Ignição (Semanas 1–2)
 
-> **Objetivo:** Começar a programar em Swift HOJE. Zero teoria pura.
+> **Objetivo:** Configurar ambiente, entender fundação iOS, construir 2 mini-apps pessoais.
 
-### Semana 1: Primeiro Contato com Swift + Git
+### Semana 1: Ambiente + Fundação iOS
 
-**Estudar:**
-- Swift Playgrounds (app da Apple) — completar os primeiros módulos
-- Variáveis, tipos, condicionais, loops — tudo em Swift
-- Git: `init`, `add`, `commit`, `push` — criar conta GitHub e primeiro repo
+**Curso Tiago Aguiar:**
+- Módulo 1 — Preparação e metodologia
+- Módulo 2 — Fundação do Ambiente (Xcode, Simuladores)
+- Módulo 3 — Fundamentos Swift no contexto iOS
+
+**Lógica em Swift:**
+- Continuar de onde parou (condicionais → loops → funções)
+- Resolver 5 problemas em Swift (não Portugol, não C)
+
+**Curso Swift (sob demanda):** Variáveis, Tipos, Optionals, Collections
 
 **Construir:**
-- Mini-app 1: **Contador** em SwiftUI (botões +/-, display do número)
-- Criar repositório GitHub "apple-academy-prep"
+- Git: criar conta GitHub + repositório "academy-prep"
+- Mini-app 1: **MoodTracker** — registrar humor do dia com emoji + nota curta (1 tela, @State)
 - Commit diário obrigatório
 
-**Entregável:** Repo GitHub com contador funcional + 7 commits (1/dia)
+**Entregável:** Repo GitHub com MoodTracker + 7 commits
 
 ---
 
-### Semana 2: Lógica em Swift + Segundo Mini-App
+### Semana 2: Primeiro App Real + Fundação iOS Moderno
 
-**Estudar:**
-- Funções, arrays, dicionários em Swift
-- Swift Playgrounds: módulos intermediários
-- Lógica de programação: resolver 5 problemas simples em Swift
+**Curso Tiago Aguiar:**
+- Módulo 4 — Fundação do iOS Moderno & Apple SDK (primeiro app, arquitetura SwiftUI)
+
+**Lógica em Swift:**
+- Funções com retorno, arrays, dicionários
+- Resolver 5 problemas em Swift
 
 **Construir:**
-- Mini-app 2: **Lista de Tarefas** simples (adicionar, marcar como feito, deletar)
-- Documentar ambos os mini-apps no README
+- Mini-app 2: **Decisor** — input opções → resultado aleatório ponderado (2 telas, NavigationView)
+- Documentar ambos os mini-apps com README
 
-**Entregável:** 2 mini-apps no GitHub com README explicativo
+**Entregável:** 2 mini-apps no GitHub com README + 14 commits totais
 
 ---
 
-## FASE 1 — Fundação Swift (Semanas 3–6)
+## FASE 1 — Primeiro App Real (Semanas 3–6)
 
-> **Objetivo:** Dominar SwiftUI básico e publicar o primeiro projeto real.
+> **Objetivo:** Aprender SwiftUI com o curso e publicar um projeto pessoal real.
+> **Zero C nesta fase.** Imersão total em Swift/SwiftUI.
 
-### Semana 3: SwiftUI Básico — Layouts e Navegação
+### Semana 3–4: SwiftUI com o Curso
 
-**Estudar:**
-- Stacks (VStack, HStack, ZStack)
-- NavigationView, NavigationLink
-- Listas e ForEach
-- Modificadores (.padding, .font, .foregroundColor)
-- 100 Days of SwiftUI (Hacking with Swift) — Dias 1–10
+**Curso Tiago Aguiar:**
+- Módulos 5–6 — SwiftUI intermediário (componentes, navegação, state management)
+
+**Curso Swift (sob demanda):** Closures, Structs vs Classes — consultar quando o curso pedir
 
 **Construir:**
-- Telas do Projeto 1: wireframe em papel → implementar navegação básica
+- Definir escopo do Projeto 1: wireframe em papel
+- Começar implementação: navegação + telas básicas
 
-**Entregável:** Estrutura de navegação do Projeto 1 no GitHub
+**Entregável:** Wireframe + estrutura do Projeto 1 no GitHub
 
 ---
 
-### Semana 4: SwiftUI — Estado e Dados
+### Semana 5–6: Projeto 1 Completo
 
-**Estudar:**
-- @State, @Binding, @ObservableObject
-- Formulários (Form, TextField, Toggle, Picker)
-- Lógica de programação: funções com retorno, closures básicas
-- C essencial: variáveis, tipos, printf/scanf (começar a preparar para prova)
+**Curso Tiago Aguiar:**
+- Módulo 7 — Apps Online (URLSession, JSON, Codable, Combine introdução)
 
 **Construir:**
-- Projeto 1: implementar lógica e interação com dados
-- 3 exercícios de C básico (só para familiarizar sintaxe)
+> **Projeto 1: "AcademyPrep"** — App de rotina de estudo para candidatos da Apple Developer Academy
+> - Temas de estudo por dia (Swift, C, Lógica, etc.)
+> - Streak de dias estudados
+> - Progresso por área com visual claro
+> - Por que este app: público real (outros candidatos), contexto Apple, demonstra autoconhecimento
+>
+> Requisitos:
+> - 3+ telas com NavigationView
+> - @State, @Binding, @AppStorage (persistência)
+> - Visual seguindo HIG (SF Symbols, cores semânticas)
+> - README com screenshots e descrição do problema
 
-**Entregável:** Projeto 1 com funcionalidades básicas operando
+**Entregável:** Projeto 1 publicado no GitHub com README profissional
+
+**Alternativas de Projeto 1:**
+| App | Descrição | Por que é real |
+|-----|-----------|---------------|
+| AcademyPrep | Rotina de estudo para candidatos | Público real, contexto Apple |
+| FocusBlock | Pomodoro com bloqueio de distrações | Problema que TODO estudante tem |
+| QuickNote | Notas rápidas por categoria com busca | Útil no dia-a-dia, mostra CRUD |
 
 ---
 
-### Semana 5: SwiftUI — Listas Dinâmicas + Persistência Simples
+## FASE 2 — Evolução (Semanas 7–11)
 
-**Estudar:**
-- UserDefaults para salvar dados
-- @AppStorage
-- Design de listas com swipe actions
-- C: arrays, strings, loops
+> **Objetivo:** SwiftUI avançado com o curso, C e raciocínio lógico em paralelo, Projeto 2, e começar ideação CBL.
+
+### Semana 7–8: Curso Avançado + Início C
+
+**Curso Tiago Aguiar:**
+- Módulo 8 — Serviços Reativos com Combine & LocalStorage (login, tokens, offline)
+- Módulo 9 — Listas e Coleções de Views (NavigationLink, Lists, Forms, Tabs)
+
+**Curso Swift (sob demanda):** Protocols, Error Handling, Async/await
+
+**C essencial (30 min/dia):**
+- Sintaxe básica, printf/scanf, variáveis e tipos
+- Arrays e strings
+- Funções com parâmetros e retorno
 
 **Construir:**
-- Projeto 1: adicionar persistência + polish visual
-- 3 exercícios de C (arrays e loops)
+- Definir escopo Projeto 2: wireframe + estrutura MVVM
+- Começar implementação
 
-**Entregável:** Projeto 1 salva dados entre sessões
+**Entregável:** Projeto 2 em andamento + 6 exercícios de C resolvidos
 
 ---
 
-### Semana 6: Projeto 1 — Finalizar e Publicar
+### Semana 9–10: Projeto 2 Completo + Raciocínio Lógico
 
-**Estudar:**
-- Como criar README profissional (screenshots, descrição, tecnologias)
-- Human Interface Guidelines: primeiros conceitos (tipografia, cores, espaçamento)
-- C: funções, structs básicas
+**Curso Tiago Aguiar:**
+- Módulo 10 — UI Cupertino e Edição de Dados (guidelines Apple, Forms nativos)
 
-**Construir:**
-- **Projeto 1 COMPLETO** — ex: Habit Tracker, Study Timer, ou Flashcards
-  - Requisitos: 3+ telas, navegação, persistência, README com screenshots
-- Publicar no GitHub com README completo
+**C essencial (30 min/dia):**
+- Ponteiros (conceito básico)
+- Structs
+- Resolver 10 exercícios
 
-**Entregável:** Projeto 1 publicado no GitHub
-
-**Sugestões de Projeto 1:**
-| App | Descrição | Skills demonstradas |
-|-----|-----------|-------------------|
-| Habit Tracker | Rastrear hábitos diários com streak | Listas, persistência, estado |
-| Study Timer | Pomodoro com histórico | Timer, gráficos simples, UX |
-| Flashcards | Criar e revisar cards | CRUD, animações, navegação |
-
----
-
-## FASE 2 — Construção (Semanas 7–11)
-
-> **Objetivo:** SwiftUI intermediário, OO em Swift, C para prova. Publicar Projeto 2.
-
-### Semana 7: OO em Swift + SwiftUI Intermediário
-
-**Estudar:**
-- Classes vs Structs em Swift
-- Herança, protocolos, extensions
-- MVVM pattern básico
-- TabView, sheets, alerts
+**Raciocínio lógico (30 min/dia):**
+- Sequências numéricas e lógicas
+- Proposições e conectivos lógicos
+- Diagramas e tabelas-verdade
 
 **Construir:**
-- Iniciar Projeto 2: definir escopo, criar estrutura MVVM
-- Refatorar Projeto 1 se necessário
-
-**Entregável:** Projeto 2 com arquitetura MVVM e navegação
-
----
-
-### Semana 8: APIs e Dados Externos
-
-**Estudar:**
-- URLSession — consumir API REST
-- JSON decoding com Codable
-- Async/await em Swift
-- C: ponteiros e alocação dinâmica (foco para prova)
-
-**Construir:**
-- Projeto 2: integrar com API externa (ou simular dados JSON)
-- 5 exercícios de C (ponteiros, strings)
-
-**Entregável:** Projeto 2 consumindo dados externos
-
----
-
-### Semana 9: Persistência Avançada + Polish
-
-**Estudar:**
-- Core Data ou SwiftData (básico)
-- Animações em SwiftUI (.animation, withAnimation, transitions)
-- C: revisão de funções, recursão
-
-**Construir:**
-- Projeto 2: persistência robusta + animações suaves
-- 5 exercícios de C (funções, recursão)
-
-**Entregável:** Projeto 2 com dados persistentes e animações
-
----
-
-### Semana 10: Projeto 2 — Finalizar e Publicar
-
-**Estudar:**
-- Acessibilidade em SwiftUI (VoiceOver, Dynamic Type)
-- Human Interface Guidelines: navegação, feedback, estados
-- Raciocínio lógico: sequências numéricas, proposições
-
-**Construir:**
-- **Projeto 2 COMPLETO** — ex: Weather App, Recipe Book, ou Expense Tracker
-  - Requisitos: 4+ telas, API ou dados complexos, MVVM, acessibilidade básica
-- README profissional + screenshots
+> **Projeto 2: "UniGuide Brasília"** — Guia de locais e serviços perto da UCB
+> - Restaurantes, transporte, bibliotecas, coworkings
+> - Dados via API ou JSON local estruturado
+> - Favoritos + busca + filtros por categoria
+> - Por que este app: contexto local (UCB/Brasília), útil para calouros, demonstra empatia
+>
+> Requisitos:
+> - 4+ telas com TabView
+> - MVVM pattern
+> - API externa ou dados JSON complexos
+> - Persistência robusta (Core Data ou SwiftData)
+> - Acessibilidade básica (VoiceOver labels, Dynamic Type)
+> - README com screenshots
 
 **Entregável:** Projeto 2 publicado no GitHub
 
-**Sugestões de Projeto 2:**
-| App | Descrição | Skills demonstradas |
-|-----|-----------|-------------------|
-| Weather App | Previsão por cidade com API | URLSession, Codable, async/await |
-| Recipe Book | Receitas com favoritos e busca | Core Data, CRUD avançado, search |
-| Expense Tracker | Controle financeiro com gráficos | Charts, persistência, cálculos |
+**Alternativas de Projeto 2:**
+| App | Descrição | Por que é real |
+|-----|-----------|---------------|
+| UniGuide Brasília | Guia de locais perto da UCB | Contexto local, útil, mostra APIs |
+| CandidatoConnect | Candidatos da Academy se conectam p/ estudar | Meta (sobre a jornada), colaboração |
+| GastosUni | Controle financeiro para universitários | Problema real, gráficos, cálculos |
 
 ---
 
-### Semana 11: Buffer + Raciocínio Lógico
+### Semana 11: Ideação CBL + Simulado
 
-**Estudar:**
-- Raciocínio lógico: diagramas, dedução, tabelas-verdade
-- Simulado de raciocínio lógico (estilo prova Academy)
-- Revisar conceitos de C que caem na prova
+**NÃO é buffer.** Esta semana produz algo concreto.
 
-**Construir:**
-- Corrigir bugs dos Projetos 1 e 2
-- Opcional: mini-projeto 3 (algo simples que demonstre outra skill)
+**CBL — Começar a pensar no Projeto Principal:**
+- Estudar CBL: Big Idea → Essential Question → Challenge
+- Listar 3 problemas reais da sua vida/comunidade
+- Entrevistar 2–3 pessoas sobre um dos problemas
+- Documentar: qual problema? quem sofre? como resolve hoje?
 
-**Entregável:** Projetos 1 e 2 polidos + score 70%+ no simulado de lógica
+**Raciocínio lógico:**
+- Simulado completo (meta: 70%+)
+- Identificar pontos fracos
+
+**Polir:**
+- Revisar Projetos 1 e 2 (bugs, README, screenshots)
+
+**Entregável:** Documento CBL com problema + 2 entrevistas + simulado 70%+
 
 ---
 
 ## FASE 3 — Projeto Principal (Semanas 12–16)
 
-> **Objetivo:** Construir O projeto que te diferencia. Usar CBL, impacto real, design intencional.
+> **Objetivo:** Construir O projeto que te diferencia. CBL aplicado, impacto real, design intencional.
+> **Nota:** A ideação já começou na sem 11. Aqui é execução.
 
-### Semana 12: CBL + Descoberta do Problema
+### Semana 12: Definir e Projetar
 
-**Estudar:**
-- Challenge-Based Learning: Big Idea → Essential Question → Challenge → Solution
-- Design Thinking: empatia, definição, ideação
-- UX Research: como fazer entrevistas curtas (5 min)
+**CBL + Design Thinking:**
+- Finalizar: Big Idea, Essential Question, Challenge
+- Entrevistar mais 2–3 pessoas (total: 5+)
+- Wireframe completo (Figma ou papel)
+- Definir arquitetura (models, views, viewmodels)
 
-**Fazer:**
-- Escolher um problema real (da sua vida, comunidade ou observação)
-- Entrevistar 3–5 pessoas sobre o problema
-- Documentar: Big Idea, Essential Question, Challenge
-- Definir o app que resolve o problema
+**Opcional:** Se o projeto precisar de backend → usar curso SwiftUI com Firebase (Tiago Aguiar)
 
-**Entregável:** Documento CBL + 3 entrevistas documentadas + escopo do app
-
-**Ideias de projeto principal com impacto:**
-| App | Problema | Diferencial Academy |
-|-----|----------|-------------------|
-| **AccessiGuide** | Falta de info sobre acessibilidade urbana | MapKit, impacto social, valor Apple |
-| **StudyBuddy** | Candidatos estudam sozinhos | Meta (sobre a jornada), colaboração |
-| **ImpactLog** | Difícil medir crescimento pessoal | Reflexão, journaling, CBL aplicado |
-| **CommunityReport** | Problemas urbanos sem canal fácil | Câmera, localização, impacto civic |
-| **ElderCare** | Idosos esquecem medicamentos | Notifications, acessibilidade, empatia |
+**Entregável:** Documento CBL completo + wireframe + projeto Xcode criado
 
 ---
 
-### Semana 13: Wireframe + Arquitetura
-
-**Estudar:**
-- Figma básico (ou sketch em papel) para wireframes
-- Fluxo de navegação (user flow)
-- Arquitetura do app: quais telas, quais dados, como persistir
+### Semana 13–14: Core Features
 
 **Construir:**
-- Wireframe completo do projeto principal (todas as telas)
-- Estrutura Xcode: criar projeto, definir models, views, viewmodels
-- Primeiras telas implementadas (layout sem funcionalidade)
-
-**Entregável:** Wireframe + projeto Xcode com navegação entre telas
-
----
-
-### Semana 14: Core Features
-
-**Estudar:**
-- APIs Apple relevantes para seu projeto (MapKit, CoreLocation, UserNotifications, etc.)
-- SwiftUI avançado conforme necessidade do projeto
-
-**Construir:**
-- Implementar as 2–3 funcionalidades principais do app
-- Integrar APIs necessárias
+- Implementar 2–3 funcionalidades principais
+- Integrar APIs Apple relevantes (MapKit, CoreLocation, UserNotifications, etc.)
 - Persistência de dados
+- SwiftUI avançado conforme necessidade
 
-**Entregável:** MVP funcional com core features
+**Entregável:** MVP funcional com core features rodando
 
 ---
 
 ### Semana 15: Polish + Acessibilidade
 
-**Estudar:**
-- Human Interface Guidelines: aprofundar (ícones, cores semânticas, SF Symbols)
-- Acessibilidade: VoiceOver labels, Dynamic Type, color contrast
-- Testes manuais: edge cases, estados vazios, erros
-
 **Construir:**
-- Polish visual completo (seguindo HIG)
-- Implementar acessibilidade
+- Polish visual seguindo HIG (SF Symbols, cores semânticas, espaçamento)
+- Acessibilidade: VoiceOver labels, Dynamic Type, color contrast
 - Estados vazios, loading, erro
-- Testes em diferentes tamanhos de tela
+- Testar em diferentes tamanhos de tela
 
 **Entregável:** App visualmente polido e acessível
 
 ---
 
-### Semana 16: Projeto Principal — Finalizar
-
-**Estudar:**
-- Como gravar demo de app (screen recording)
-- Como escrever README no formato CBL (problema → pesquisa → solução → impacto)
-- Pitch: estrutura de 3 minutos
+### Semana 16: Finalizar + Demo
 
 **Construir:**
 - **PROJETO PRINCIPAL COMPLETO**
-  - 5+ telas
-  - Navegação completa
-  - Persistência robusta
-  - Acessibilidade
+  - 5+ telas, navegação completa, persistência robusta
+  - Acessibilidade implementada
   - Design seguindo HIG
-  - README formato CBL com screenshots/GIFs
+  - README formato CBL: problema → pesquisa → solução → impacto
+  - Screenshots/GIFs no README
   - Vídeo demo de 1 minuto
 - Praticar pitch de 3 minutos
 
 **Entregável:** Projeto principal publicado no GitHub com README CBL + vídeo demo
 
+**Ideias de projeto principal:**
+| App | Problema | Diferencial Academy |
+|-----|----------|-------------------|
+| **AccessiGuide** | Falta de info sobre acessibilidade urbana | MapKit, impacto social, valor Apple |
+| **StudyBuddy** | Candidatos estudam sozinhos | Meta (sobre a jornada), colaboração |
+| **CommunityReport** | Problemas urbanos sem canal fácil | Câmera, localização, impacto cívico |
+| **ElderCare** | Idosos esquecem medicamentos | Notifications, acessibilidade, empatia |
+
 ---
 
 ## FASE 4 — Polimento Final (Semanas 17–20)
 
-> **Objetivo:** Portfolio impecável, simulados, preparação completa para o processo.
-
-### Semana 17: Portfolio GitHub + Projeto Bônus (Opcional)
-
-**Estudar:**
-- Como criar profile README no GitHub
-- Revisar todos os projetos: links, screenshots, descrições
+### Semana 17: Portfolio GitHub
 
 **Construir:**
 - GitHub profile README profissional
-- Revisar e polir todos os projetos
-- Opcional: projeto bônus simples que mostre outra skill (ex: app com CoreML, HealthKit, ou widgets)
+- Revisar e polir TODOS os projetos (links, screenshots, descrições)
+- Opcional: projeto bônus simples com skill diferente (CoreML, HealthKit, widgets)
 
 **Entregável:** GitHub portfolio completo com 3–4 projetos documentados
 
 ---
 
-### Semana 18: Simulado de Prova Técnica
+### Semana 18: Simulado de Prova
 
 **Estudar:**
 - Revisão intensiva de C: variáveis, tipos, arrays, ponteiros, funções, structs
 - Revisão de raciocínio lógico: sequências, proposições, diagramas
 - Revisão de lógica de programação: algoritmos, pseudocódigo
 
-**Construir:**
+**Fazer:**
 - Simulado completo cronometrado (2h)
 - Identificar pontos fracos → estudar focado
-- Segundo simulado se necessário
 
-**Entregável:** Score 80%+ no simulado de prova técnica
+**Entregável:** Score 80%+ no simulado
 
 ---
 
-### Semana 19: Preparação de Entrevista + Dinâmica
-
-**Estudar:**
-- Perguntas comuns da entrevista Academy (motivação, colaboração, criatividade)
-- Como participar de dinâmica de grupo (ouvir, contribuir, liderar sem dominar)
-- CBL: revisar para poder explicar fluentemente
+### Semana 19: Preparação de Entrevista
 
 **Praticar:**
-- Escrever respostas para: "Por que a Academy?", "Conte sobre um projeto seu", "Como você resolveria X?"
+- Escrever respostas para 10 perguntas comuns ("Por que a Academy?", "Conte sobre um projeto seu")
 - Gravar pitch do projeto principal (3 min) e reassistir
 - Simular entrevista com amigo/familiar
-- Simular dinâmica de grupo: receber problema → propor solução em 15 min
+- Simular dinâmica de grupo: problema → solução em 15 min
 
-**Entregável:** Pitch gravado + respostas escritas para 10 perguntas + 1 simulação completa
+**Entregável:** Pitch gravado + respostas escritas + 1 simulação completa
 
 ---
 
-### Semana 20: Revisão Final + Mentalidade
-
-**Estudar:**
-- Revisar tudo: C, lógica, raciocínio, Swift (revisão rápida, não aprofundar)
-- Reler seus READMEs e saber explicar cada decisão técnica
+### Semana 20: Revisão Final
 
 **Fazer:**
 - Simulado final de prova (2h cronometradas)
 - Entrevista simulada final
-- Verificar: GitHub público? Todos os links funcionam? READMEs ok?
-- Escrever reflexão: "O que aprendi nessa jornada" (para usar na entrevista)
+- Verificar: GitHub público? Links funcionam? READMEs ok?
+- Escrever reflexão: "O que aprendi nessa jornada"
 
 **Entregável:** Tudo pronto. Portfolio público, pitch afiado, confiança.
 
 ---
 
-## Checklist Final — O que Levar para o Processo Seletivo
-
-### Portfolio (GitHub público)
-- [ ] 3–4 projetos publicados com README profissional
-- [ ] 1 projeto principal com diferencial (CBL, impacto, design)
-- [ ] Profile README do GitHub
-- [ ] Commits consistentes ao longo de 20 semanas
-
-### Prova Técnica
-- [ ] C: variáveis, tipos, arrays, ponteiros, funções, structs
-- [ ] Lógica de programação: algoritmos, condicionais, loops, funções
-- [ ] Raciocínio lógico: sequências, proposições, diagramas
-- [ ] Score 80%+ em simulados
-
-### Entrevista
-- [ ] Pitch de 3 minutos do projeto principal
-- [ ] Respostas preparadas para perguntas comuns
-- [ ] Sabe explicar CBL e como aplicou
-- [ ] Sabe falar sobre cada projeto com segurança
-
-### Dinâmica de Grupo
-- [ ] Praticou propor soluções em tempo limitado
-- [ ] Sabe ouvir, contribuir e liderar sem dominar
-- [ ] Demonstra colaboração e empatia
-
----
-
-## Rotina Diária Sugerida (2–3h/dia)
+## Rotina Diária (2–3h)
 
 | Bloco | Tempo | Atividade |
 |-------|-------|-----------|
-| Aquecimento | 15 min | Revisar o que fez ontem, planejar o dia |
-| Estudo | 45 min | Conteúdo novo (Swift, C, lógica) |
-| Build | 60 min | Construir/avançar projeto do momento |
-| Prática | 30 min | Exercícios (C, raciocínio lógico, ou Playgrounds) |
-| Commit | 10 min | Git add, commit, push + anotar o que aprendeu |
+| Curso | 45–60 min | Aula do Tiago Aguiar (iOS Developer) + praticar junto |
+| Build | 45–60 min | Construir/avançar projeto da fase atual |
+| Paralelo | 30 min | C ou Raciocínio Lógico (a partir da Fase 2) |
+| Commit | 10 min | Git add, commit, push |
 
-**Nos fins de semana:** sessão mais longa (3–4h) focada em projeto.
+**Fins de semana:** sessão mais longa (3–4h) focada em projeto.
 
 ---
 
 ## Regras de Ouro
 
-1. **Commit diário.** Mesmo que pequeno. O histórico do GitHub conta sua história.
-2. **Projeto > Tutorial.** Assistir vídeo sem construir = tempo perdido.
-3. **C é meio, não fim.** Aprenda o suficiente para a prova, não para virar expert.
-4. **Swift é o core.** É a linguagem da Academy. Invista pesado.
-5. **README é seu pitch escrito.** Todo projeto precisa de um bom README.
-6. **CBL não é buzzword.** Aplique de verdade no projeto principal.
-7. **Acessibilidade é valor Apple.** Implementar = diferencial real.
-8. **Peça feedback.** Mostre seus apps para pessoas reais.
+1. **Curso do Tiago = eixo.** Não pule módulos, não busque tutoriais avulsos.
+2. **Curso de Swift = dicionário.** Consulta quando precisar, não segue linearmente.
+3. **Commit diário.** Mesmo que pequeno.
+4. **Projeto > Tutorial.** Assistir aula sem construir = tempo perdido.
+5. **C é meio, não fim.** 30 min/dia a partir da Fase 2, suficiente para a prova.
+6. **Todo projeto resolve um problema.** Se não tem usuário real, é exercício.
+7. **CBL não é buzzword.** Entreviste pessoas de verdade.
+8. **Acessibilidade é valor Apple.** Implementar = diferencial real.

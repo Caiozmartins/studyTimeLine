@@ -79,9 +79,9 @@ function setupCheckboxListeners() {
 // ===== Progress Updates =====
 
 function updateAllProgress() {
-    updateCategoryProgress('fase0', ['swift-basico']);
-    updateCategoryProgress('fase1', ['swiftui-basico', 'projeto1', 'c-essencial']);
-    updateCategoryProgress('fase2', ['swift-avancado', 'projeto2', 'prova-prep']);
+    updateCategoryProgress('fase0', ['curso-inicio']);
+    updateCategoryProgress('fase1', ['curso-swiftui', 'projeto1']);
+    updateCategoryProgress('fase2', ['curso-avancado', 'projeto2', 'prova-prep', 'ideacao-cbl']);
     updateCategoryProgress('fase3', ['cbl-design', 'projeto-principal']);
     updateCategoryProgress('fase4', ['portfolio', 'entrevista-final']);
     updateCategoryProgress('ingles', ['ingles-m1', 'ingles-m2', 'ingles-m3']);
@@ -147,7 +147,7 @@ function updateStats() {
     document.getElementById('statPending').textContent = allItems.length - allChecked.length;
 
     // Count completed sections
-    const topics = ['swift-basico', 'swiftui-basico', 'projeto1', 'c-essencial', 'swift-avancado', 'projeto2', 'prova-prep', 'cbl-design', 'projeto-principal', 'portfolio', 'entrevista-final', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
+    const topics = ['curso-inicio', 'curso-swiftui', 'projeto1', 'curso-avancado', 'projeto2', 'prova-prep', 'ideacao-cbl', 'cbl-design', 'projeto-principal', 'portfolio', 'entrevista-final', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
     let completedSections = 0;
 
     topics.forEach(topicId => {
@@ -336,7 +336,7 @@ function checkForCelebration() {
     }
 
     // Also celebrate completing a topic
-    const topics = ['swift-basico', 'swiftui-basico', 'projeto1', 'c-essencial', 'swift-avancado', 'projeto2', 'prova-prep', 'cbl-design', 'projeto-principal', 'portfolio', 'entrevista-final', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
+    const topics = ['curso-inicio', 'curso-swiftui', 'projeto1', 'curso-avancado', 'projeto2', 'prova-prep', 'ideacao-cbl', 'cbl-design', 'projeto-principal', 'portfolio', 'entrevista-final', 'ingles-m1', 'ingles-m2', 'ingles-m3', 'livro'];
     topics.forEach(topicId => {
         const list = document.getElementById(`${topicId}-list`);
         if (!list) return;
@@ -523,13 +523,13 @@ function resetData() {
 // ===== Kanban Board =====
 
 const TOPIC_LABELS = {
-    'swift-basico': 'Swift Básico + Git',
-    'swiftui-basico': 'SwiftUI Básico',
-    'projeto1': 'Projeto 1 — Publicar',
-    'c-essencial': 'C Essencial para Prova',
-    'swift-avancado': 'Swift + SwiftUI Intermediário',
-    'projeto2': 'Projeto 2 — Publicar',
-    'prova-prep': 'Preparação para Prova',
+    'curso-inicio': 'Curso Tiago (Mód 1-4) + Lógica + Git',
+    'curso-swiftui': 'Curso Tiago (Mód 5-7)',
+    'projeto1': 'Projeto 1 — AcademyPrep',
+    'curso-avancado': 'Curso Tiago (Mód 8-10)',
+    'projeto2': 'Projeto 2 — UniGuide Brasília',
+    'prova-prep': 'C + Raciocínio Lógico para Prova',
+    'ideacao-cbl': 'Ideação CBL',
     'cbl-design': 'CBL + Design Thinking',
     'projeto-principal': 'Projeto Principal',
     'portfolio': 'Portfolio + Simulados',

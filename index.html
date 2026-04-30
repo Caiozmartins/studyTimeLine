@@ -41,11 +41,11 @@
             <button class="nav-btn active" data-section="all">Todos</button>
             <button class="nav-btn" data-section="roadmap">Roteiro</button>
             <button class="nav-btn" data-section="kanban">Kanban</button>
-            <button class="nav-btn" data-section="fase0">Fase 0</button>
-            <button class="nav-btn" data-section="fase1">Fase 1</button>
-            <button class="nav-btn" data-section="fase2">Fase 2</button>
-            <button class="nav-btn" data-section="fase3">Fase 3</button>
-            <button class="nav-btn" data-section="fase4">Fase 4</button>
+            <button class="nav-btn" data-section="fase0">Ignição</button>
+            <button class="nav-btn" data-section="fase1">1o App</button>
+            <button class="nav-btn" data-section="fase2">Evolução</button>
+            <button class="nav-btn" data-section="fase3">Projeto Principal</button>
+            <button class="nav-btn" data-section="fase4">Polimento</button>
             <button class="nav-btn" data-section="ingles">Inglês</button>
             <button class="nav-btn" data-section="livro">Livro</button>
         </div>
@@ -88,7 +88,7 @@
                     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 </div>
                 <div class="stat-info">
-                    <span class="stat-number" id="statSections">0/12</span>
+                    <span class="stat-number" id="statSections">0/13</span>
                     <span class="stat-label">Seções completas</span>
                 </div>
             </div>
@@ -104,101 +104,63 @@
             </div>
 
             <div class="roadmap-intro">
-                <p><strong>Princípio:</strong> Construir > Estudar. Swift desde o dia 1. Cada semana produz algo concreto.</p>
+                <p><strong>Eixo principal:</strong> Curso iOS Developer (Tiago Aguiar). Curso de Swift = suporte sob demanda. Cada semana produz algo funcional.</p>
             </div>
 
             <div class="roadmap-timeline">
-                <!-- Fase 0 -->
                 <div class="roadmap-step">
                     <div class="step-number">0</div>
                     <div class="step-content">
                         <div class="step-header">
-                            <h3>Ignição — Swift + Git</h3>
+                            <h3>Ignição</h3>
                             <span class="step-duration">Semanas 1–2</span>
                         </div>
-                        <p class="step-why">Começa a programar em Swift HOJE. Zero teoria pura. Git desde o dia 1.</p>
+                        <p class="step-why">Curso Tiago Aguiar Módulos 1-4 + Lógica em Swift + Git. Construir 2 mini-apps pessoais.</p>
                         <div class="step-courses">
                             <h4>Recursos:</h4>
                             <ul>
-                                <li>
-                                    <strong>Swift Playgrounds</strong> (app gratuito da Apple)
-                                    <span class="course-tag best">Melhor opção</span>
-                                    <p class="course-desc">Aprenda Swift de forma interativa no iPad ou Mac.</p>
-                                </li>
-                                <li>
-                                    <strong>Curso em Vídeo — Git e GitHub</strong>
-                                    <span class="course-tag">Essencial</span>
-                                    <p class="course-desc">20 aulas. Git é obrigatório desde o dia 1.</p>
-                                </li>
+                                <li><strong>iOS Developer — Tiago Aguiar</strong> (Módulos 1-4)<span class="course-tag best">Eixo principal</span><p class="course-desc">Preparação + Ambiente + Fundação iOS + Apple SDK.</p></li>
+                                <li><strong>Curso de Swift — Tiago Aguiar</strong><span class="course-tag">Sob demanda</span><p class="course-desc">Consultar quando precisar. NÃO seguir linearmente.</p></li>
                             </ul>
                         </div>
-                        <div class="step-practice">
-                            <span>Entregável:</span> 2 mini-apps no GitHub + 14 commits (1/dia)
-                        </div>
+                        <div class="step-practice"><span>Entregável:</span> 2 mini-apps pessoais no GitHub (MoodTracker + Decisor) + 14 commits</div>
                     </div>
                 </div>
-
-                <!-- Fase 1 -->
                 <div class="roadmap-step">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <div class="step-header">
-                            <h3>Fundação Swift</h3>
+                            <h3>Primeiro App Real</h3>
                             <span class="step-duration">Semanas 3–6</span>
                         </div>
-                        <p class="step-why">Dominar SwiftUI básico e publicar o primeiro projeto real. C começa em paralelo (só o essencial para prova).</p>
+                        <p class="step-why">Curso Tiago Módulos 5-7 (SwiftUI → APIs). Zero C — imersão total Swift. Publicar Projeto 1.</p>
                         <div class="step-courses">
                             <h4>Recursos:</h4>
                             <ul>
-                                <li>
-                                    <strong>100 Days of SwiftUI</strong> (Hacking with Swift)
-                                    <span class="course-tag best">Melhor opção</span>
-                                    <p class="course-desc">Paul Hudson. Projeto-a-projeto. Dias 1–25 cobrem o essencial.</p>
-                                </li>
-                                <li>
-                                    <strong>Curso em Vídeo — Linguagem C</strong>
-                                    <span class="course-tag">Para prova</span>
-                                    <p class="course-desc">Só os fundamentos: variáveis, arrays, funções. Não precisa aprofundar.</p>
-                                </li>
+                                <li><strong>iOS Developer — Tiago Aguiar</strong> (Módulos 5-7)<span class="course-tag best">Eixo principal</span><p class="course-desc">SwiftUI intermediário + Apps Online (URLSession, JSON, Codable, Combine).</p></li>
                             </ul>
                         </div>
-                        <div class="step-practice">
-                            <span>Entregável:</span> Projeto 1 publicado no GitHub (3+ telas, persistência, README)
-                        </div>
+                        <div class="step-practice"><span>Entregável:</span> Projeto 1 "AcademyPrep" publicado (3+ telas, persistência, README)</div>
                     </div>
                 </div>
-
-                <!-- Fase 2 -->
                 <div class="roadmap-step">
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <div class="step-header">
-                            <h3>Construção</h3>
+                            <h3>Evolução</h3>
                             <span class="step-duration">Semanas 7–11</span>
                         </div>
-                        <p class="step-why">SwiftUI intermediário, OO em Swift (não Java), APIs, persistência avançada. C para prova.</p>
+                        <p class="step-why">Curso Tiago Módulos 8-10 (Combine, Storage, Cupertino). C e Raciocínio Lógico em paralelo. Ideação CBL na sem 11.</p>
                         <div class="step-courses">
                             <h4>Recursos:</h4>
                             <ul>
-                                <li>
-                                    <strong>100 Days of SwiftUI</strong> (continuação)
-                                    <span class="course-tag best">Melhor opção</span>
-                                    <p class="course-desc">Dias 25–50: MVVM, APIs, Codable, Core Data.</p>
-                                </li>
-                                <li>
-                                    <strong>Matemática Rio — Raciocínio Lógico</strong>
-                                    <span class="course-tag">Para prova</span>
-                                    <p class="course-desc">Sequências, proposições, diagramas. 30 min/dia em paralelo.</p>
-                                </li>
+                                <li><strong>iOS Developer — Tiago Aguiar</strong> (Módulos 8-10)<span class="course-tag best">Eixo principal</span><p class="course-desc">Combine, LocalStorage, UI Cupertino, Design Patterns.</p></li>
+                                <li><strong>Matemática Rio — Raciocínio Lógico</strong><span class="course-tag">30 min/dia</span><p class="course-desc">Sequências, proposições, diagramas. Em paralelo.</p></li>
                             </ul>
                         </div>
-                        <div class="step-practice">
-                            <span>Entregável:</span> Projeto 2 publicado (4+ telas, API, MVVM, acessibilidade) + simulado lógica 70%+
-                        </div>
+                        <div class="step-practice"><span>Entregável:</span> Projeto 2 publicado + problema CBL definido + simulado lógica 70%+</div>
                     </div>
                 </div>
-
-                <!-- Fase 3 -->
                 <div class="roadmap-step">
                     <div class="step-number">3</div>
                     <div class="step-content">
@@ -210,25 +172,13 @@
                         <div class="step-courses">
                             <h4>Recursos:</h4>
                             <ul>
-                                <li>
-                                    <strong>Apple — Challenge Based Learning Guide</strong>
-                                    <span class="course-tag best">Essencial</span>
-                                    <p class="course-desc">Metodologia oficial. Big Idea → Essential Question → Challenge → Solution.</p>
-                                </li>
-                                <li>
-                                    <strong>Apple — Human Interface Guidelines</strong>
-                                    <span class="course-tag best">Essencial</span>
-                                    <p class="course-desc">Design guidelines oficiais. Diferencial real na Academy.</p>
-                                </li>
+                                <li><strong>Apple — Challenge Based Learning Guide</strong><span class="course-tag best">Essencial</span><p class="course-desc">Big Idea → Essential Question → Challenge → Solution.</p></li>
+                                <li><strong>Apple — Human Interface Guidelines</strong><span class="course-tag best">Essencial</span><p class="course-desc">Design guidelines oficiais. Diferencial real na Academy.</p></li>
                             </ul>
                         </div>
-                        <div class="step-practice">
-                            <span>Entregável:</span> Projeto principal com CBL + README + vídeo demo + pitch de 3 min
-                        </div>
+                        <div class="step-practice"><span>Entregável:</span> Projeto principal com CBL + README + vídeo demo + pitch de 3 min</div>
                     </div>
                 </div>
-
-                <!-- Fase 4 -->
                 <div class="roadmap-step">
                     <div class="step-number">4</div>
                     <div class="step-content">
@@ -240,16 +190,10 @@
                         <div class="step-courses">
                             <h4>Recursos:</h4>
                             <ul>
-                                <li>
-                                    <strong>Playlist "Estudos Apple Developer Academy | UCB"</strong> (YouTube)
-                                    <span class="course-tag best">Essencial</span>
-                                    <p class="course-desc">Dicas de ex-alunos e resoluções de provas anteriores.</p>
-                                </li>
+                                <li><strong>Playlist "Estudos Apple Developer Academy | UCB"</strong> (YouTube)<span class="course-tag best">Essencial</span><p class="course-desc">Dicas de ex-alunos e resoluções de provas anteriores.</p></li>
                             </ul>
                         </div>
-                        <div class="step-practice">
-                            <span>Entregável:</span> Portfolio GitHub completo, simulado 80%+, pitch afiado, entrevista simulada
-                        </div>
+                        <div class="step-practice"><span>Entregável:</span> Portfolio GitHub completo, simulado 80%+, pitch afiado, entrevista simulada</div>
                     </div>
                 </div>
             </div>
@@ -259,7 +203,7 @@
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
                 </div>
                 <div>
-                    <strong>Regra de ouro:</strong> Projeto > Tutorial. Commit diário. C é meio, não fim. Swift é o core. README é seu pitch escrito.
+                    <strong>Regra de ouro:</strong> Curso do Tiago = eixo. Curso de Swift = dicionário. Commit diário. Todo projeto resolve um problema real.
                 </div>
             </div>
         </section>
@@ -286,7 +230,7 @@
                 </div>
             </div>
 
-            <div class="topic-card" data-topic="swift-basico" data-step="1">
+            <div class="topic-card" data-topic="curso-inicio" data-step="1">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
                         <span class="step-badge step-1">Sem 1–2</span>
@@ -294,48 +238,48 @@
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
                         </div>
                         <div>
-                            <h3>Swift Básico + Git</h3>
-                            <p class="topic-description">Primeiro contato com Swift, SwiftUI e controle de versão</p>
+                            <h3>Curso Tiago (Mod 1-4) + Logica + Git</h3>
+                            <p class="topic-description">Ambiente, fundacao iOS, logica em Swift, 2 mini-apps pessoais</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="swift-basico-badge">0/8</span>
+                        <span class="topic-progress-badge" id="curso-inicio-badge">0/8</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="swift-basico-list">
+                    <ul class="checklist" id="curso-inicio-list">
                         <li class="checklist-item" data-id="sw-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Instalar Xcode e Swift Playgrounds</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Tiago Aguiar: Modulos 1-4 (Preparacao + Ambiente + Fundacao iOS)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="sw-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Variáveis, tipos e condicionais em Swift</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Logica em Swift: condicionais, loops, funcoes</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="sw-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Loops e controle de fluxo em Swift</span></label>
-                            <span class="priority high">Alta</span>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Swift (linguagem): Variaveis, Tipos, Optionals (sob demanda)</span></label>
+                            <span class="priority medium">Media</span>
                         </li>
                         <li class="checklist-item" data-id="sw-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Funções, arrays e dicionários em Swift</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Construir mini-app MoodTracker (1 tela, emoji + nota do dia)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="sw-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Construir mini-app Contador em SwiftUI</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Construir mini-app Decisor (2 telas, input opcoes + resultado)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="sw-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Construir mini-app Lista de Tarefas em SwiftUI</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="sw-7">
                             <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Git: init, add, commit, push — criar repo GitHub</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="sw-8">
+                        <li class="checklist-item" data-id="sw-7">
                             <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Documentar mini-apps com README no GitHub</span></label>
                             <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="sw-8">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Manter streak: commit diario obrigatorio (14 commits)</span></label>
+                            <span class="priority high">Alta</span>
                         </li>
                     </ul>
                 </div>
@@ -343,13 +287,13 @@
         </section>
 
         <!-- ============================================ -->
-        <!-- FASE 1 — FUNDAÇÃO SWIFT (Semanas 3-6)       -->
+        <!-- FASE 1 — PRIMEIRO APP REAL (Semanas 3-6)    -->
         <!-- ============================================ -->
         <section class="category-section" data-category="fase1">
             <div class="category-header">
                 <div class="category-title">
                     <span class="category-badge badge-prova">Sem 3–6</span>
-                    <h2>Fase 1 — Fundação Swift</h2>
+                    <h2>Fase 1 — Primeiro App Real</h2>
                 </div>
                 <div class="category-progress">
                     <div class="progress-bar">
@@ -359,65 +303,57 @@
                 </div>
             </div>
 
-            <!-- SwiftUI Básico -->
-            <div class="topic-card" data-topic="swiftui-basico" data-step="2">
+            <!-- Curso Tiago (Mod 5-7) -->
+            <div class="topic-card" data-topic="curso-swiftui" data-step="2">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-2">Sem 3–4</span>
+                        <span class="step-badge step-2">Sem 3-4</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
                         </div>
                         <div>
-                            <h3>SwiftUI Básico</h3>
-                            <p class="topic-description">Layouts, navegação, estado e formulários</p>
+                            <h3>Curso Tiago (Mod 5-7)</h3>
+                            <p class="topic-description">SwiftUI intermediario + Apps Online. Curso de Swift = consulta</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="swiftui-basico-badge">0/6</span>
+                        <span class="topic-progress-badge" id="curso-swiftui-badge">0/4</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="swiftui-basico-list">
-                        <li class="checklist-item" data-id="sui-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Stacks (VStack, HStack, ZStack) e layouts</span></label>
+                    <ul class="checklist" id="curso-swiftui-list">
+                        <li class="checklist-item" data-id="cs-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Tiago Aguiar: Modulos 5-6 (SwiftUI intermediario)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="sui-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">NavigationView e NavigationLink</span></label>
+                        <li class="checklist-item" data-id="cs-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Tiago Aguiar: Modulo 7 (Apps Online — URLSession, JSON, Codable)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="sui-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Listas, ForEach e modificadores visuais</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="sui-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">@State, @Binding e gerenciamento de estado</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="sui-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Formulários (Form, TextField, Toggle, Picker)</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="sui-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Closures e funções avançadas em Swift</span></label>
+                        <li class="checklist-item" data-id="cs-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Swift (linguagem): closures, structs, classes (sob demanda)</span></label>
                             <span class="priority medium">Media</span>
+                        </li>
+                        <li class="checklist-item" data-id="cs-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Praticar junto: recriar cada exercicio do curso com variacoes</span></label>
+                            <span class="priority high">Alta</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Projeto 1 -->
+            <!-- Projeto 1 — AcademyPrep -->
             <div class="topic-card" data-topic="projeto1" data-step="2">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-3">Sem 5–6</span>
+                        <span class="step-badge step-3">Sem 5-6</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
                         </div>
                         <div>
-                            <h3>Projeto 1 — Publicar</h3>
-                            <p class="topic-description">Habit Tracker, Study Timer ou Flashcards — 3+ telas com persistência</p>
+                            <h3>Projeto 1 — AcademyPrep</h3>
+                            <p class="topic-description">App de rotina de estudo para candidatos da Academy — problema real</p>
                         </div>
                     </div>
                     <div class="topic-meta">
@@ -428,19 +364,19 @@
                 <div class="topic-content">
                     <ul class="checklist" id="projeto1-list">
                         <li class="checklist-item" data-id="p1-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Definir escopo do Projeto 1 (wireframe em papel)</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Definir escopo do Projeto 1 — wireframe em papel</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="p1-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar persistência (UserDefaults / @AppStorage)</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar navegacao e telas (3+ telas)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="p1-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar navegação e fluxo completo (3+ telas)</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar estado e persistencia (@AppStorage)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="p1-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Polish visual seguindo Human Interface Guidelines</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Polish visual seguindo HIG (SF Symbols, cores, tipografia)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="p1-5">
@@ -454,56 +390,16 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- C Essencial -->
-            <div class="topic-card" data-topic="c-essencial" data-step="2">
-                <div class="topic-header" onclick="toggleTopic(this)">
-                    <div class="topic-info">
-                        <span class="step-badge step-4">Paralelo</span>
-                        <div class="topic-icon">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                        </div>
-                        <div>
-                            <h3>C Essencial para Prova</h3>
-                            <p class="topic-description">Só o necessário: sintaxe, arrays, funções — não aprofundar</p>
-                        </div>
-                    </div>
-                    <div class="topic-meta">
-                        <span class="topic-progress-badge" id="c-essencial-badge">0/4</span>
-                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
-                </div>
-                <div class="topic-content">
-                    <ul class="checklist" id="c-essencial-list">
-                        <li class="checklist-item" data-id="ce-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Sintaxe básica de C (printf, scanf, variáveis, tipos)</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="ce-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Arrays e strings em C</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="ce-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Funções em C com parâmetros e retorno</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="ce-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver 10 exercícios básicos de C</span></label>
-                            <span class="priority medium">Media</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </section>
 
         <!-- ============================================ -->
-        <!-- FASE 2 — CONSTRUÇÃO (Semanas 7-11)          -->
+        <!-- FASE 2 — EVOLUCAO (Semanas 7-11)            -->
         <!-- ============================================ -->
         <section class="category-section" data-category="fase2">
             <div class="category-header">
                 <div class="category-title">
                     <span class="category-badge badge-entrevista">Sem 7–11</span>
-                    <h2>Fase 2 — Construção</h2>
+                    <h2>Fase 2 — Evolucao</h2>
                 </div>
                 <div class="category-progress">
                     <div class="progress-bar">
@@ -513,65 +409,53 @@
                 </div>
             </div>
 
-            <!-- Swift + SwiftUI Intermediário -->
-            <div class="topic-card" data-topic="swift-avancado" data-step="3">
+            <!-- Curso Tiago (Mod 8-10) -->
+            <div class="topic-card" data-topic="curso-avancado" data-step="3">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-1">Sem 7–9</span>
+                        <span class="step-badge step-1">Sem 7-9</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
                         </div>
                         <div>
-                            <h3>Swift + SwiftUI Intermediário</h3>
-                            <p class="topic-description">OO em Swift, MVVM, APIs, persistência avançada, animações</p>
+                            <h3>Curso Tiago (Mod 8-10)</h3>
+                            <p class="topic-description">Combine, LocalStorage, UI Cupertino, Design Patterns</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="swift-avancado-badge">0/6</span>
+                        <span class="topic-progress-badge" id="curso-avancado-badge">0/3</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
-                    <ul class="checklist" id="swift-avancado-list">
-                        <li class="checklist-item" data-id="sa-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Classes vs Structs, protocolos e extensions em Swift</span></label>
+                    <ul class="checklist" id="curso-avancado-list">
+                        <li class="checklist-item" data-id="ca-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Tiago Aguiar: Modulo 8 (Combine & LocalStorage)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="sa-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">MVVM pattern em SwiftUI</span></label>
+                        <li class="checklist-item" data-id="ca-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Tiago Aguiar: Modulo 9 (Listas e Colecoes de Views)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="sa-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">URLSession — consumir API REST</span></label>
+                        <li class="checklist-item" data-id="ca-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Curso Tiago Aguiar: Modulo 10 (UI Cupertino e Edicao de Dados)</span></label>
                             <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="sa-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">JSON decoding com Codable + async/await</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="sa-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Core Data ou SwiftData (persistência robusta)</span></label>
-                            <span class="priority medium">Media</span>
-                        </li>
-                        <li class="checklist-item" data-id="sa-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Animações em SwiftUI (.animation, withAnimation)</span></label>
-                            <span class="priority medium">Media</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Projeto 2 -->
+            <!-- Projeto 2 — UniGuide Brasilia -->
             <div class="topic-card" data-topic="projeto2" data-step="3">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-2">Sem 8–10</span>
+                        <span class="step-badge step-2">Sem 8-10</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
                         </div>
                         <div>
-                            <h3>Projeto 2 — Publicar</h3>
-                            <p class="topic-description">Weather App, Recipe Book ou Expense Tracker — 4+ telas com API</p>
+                            <h3>Projeto 2 — UniGuide Brasilia</h3>
+                            <p class="topic-description">Guia de locais e servicos perto da UCB — 4+ telas, API, MVVM</p>
                         </div>
                     </div>
                     <div class="topic-meta">
@@ -586,11 +470,11 @@
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="p2-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Integrar API externa ou dados complexos</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Integrar API externa ou dados JSON complexos</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="p2-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar persistência robusta</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Implementar persistencia robusta (Core Data ou SwiftData)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="p2-4">
@@ -609,7 +493,7 @@
                 </div>
             </div>
 
-            <!-- Preparação para Prova -->
+            <!-- C + Raciocinio Logico para Prova -->
             <div class="topic-card" data-topic="prova-prep" data-step="3">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
@@ -618,35 +502,79 @@
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
                         </div>
                         <div>
-                            <h3>Preparação para Prova</h3>
-                            <p class="topic-description">C avançado + raciocínio lógico — o que cai na prova</p>
+                            <h3>C + Raciocinio Logico para Prova</h3>
+                            <p class="topic-description">30 min/dia em paralelo — so o necessario para a prova</p>
                         </div>
                     </div>
                     <div class="topic-meta">
-                        <span class="topic-progress-badge" id="prova-prep-badge">0/5</span>
+                        <span class="topic-progress-badge" id="prova-prep-badge">0/6</span>
                         <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                     </div>
                 </div>
                 <div class="topic-content">
                     <ul class="checklist" id="prova-prep-list">
                         <li class="checklist-item" data-id="pp-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">C: ponteiros e alocação dinâmica</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">C: sintaxe basica, printf/scanf, variaveis e tipos</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pp-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">C: structs e recursão</span></label>
-                            <span class="priority medium">Media</span>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">C: arrays, strings e funcoes</span></label>
+                            <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pp-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Raciocínio lógico: sequências e proposições</span></label>
-                            <span class="priority high">Alta</span>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">C: ponteiros e structs (conceito basico)</span></label>
+                            <span class="priority medium">Media</span>
                         </li>
                         <li class="checklist-item" data-id="pp-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Raciocínio lógico: diagramas e dedução</span></label>
-                            <span class="priority high">Alta</span>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Resolver 10 exercicios de C</span></label>
+                            <span class="priority medium">Media</span>
                         </li>
                         <li class="checklist-item" data-id="pp-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simulado de raciocínio lógico (meta: 70%+)</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Raciocinio logico: sequencias, proposicoes, diagramas</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="pp-6">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simulado de raciocinio logico (meta: 70%+)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ideacao CBL -->
+            <div class="topic-card" data-topic="ideacao-cbl" data-step="3">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                    <div class="topic-info">
+                        <span class="step-badge step-4">Sem 11</span>
+                        <div class="topic-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        </div>
+                        <div>
+                            <h3>Ideacao CBL</h3>
+                            <p class="topic-description">Comecar a pensar no projeto principal — descobrir o problema real</p>
+                        </div>
+                    </div>
+                    <div class="topic-meta">
+                        <span class="topic-progress-badge" id="ideacao-cbl-badge">0/4</span>
+                        <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+                <div class="topic-content">
+                    <ul class="checklist" id="ideacao-cbl-list">
+                        <li class="checklist-item" data-id="ic-1">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar CBL: Big Idea → Essential Question → Challenge</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ic-2">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Listar 3 problemas reais da sua vida/comunidade</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ic-3">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entrevistar 2–3 pessoas sobre um dos problemas</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="ic-4">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Documentar: problema, quem sofre, como resolve hoje</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                     </ul>
@@ -671,17 +599,17 @@
                 </div>
             </div>
 
-            <!-- CBL + Design -->
+            <!-- CBL + Design Thinking -->
             <div class="topic-card" data-topic="cbl-design" data-step="4">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-5">Sem 12–13</span>
+                        <span class="step-badge step-5">Sem 12-13</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
                         </div>
                         <div>
                             <h3>CBL + Design Thinking</h3>
-                            <p class="topic-description">Descobrir problema real, entrevistar pessoas, documentar processo</p>
+                            <p class="topic-description">Finalizar pesquisa, wireframe e arquitetura do projeto principal</p>
                         </div>
                     </div>
                     <div class="topic-meta">
@@ -692,40 +620,40 @@
                 <div class="topic-content">
                     <ul class="checklist" id="cbl-design-list">
                         <li class="checklist-item" data-id="cd-1">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Estudar CBL: Big Idea → Essential Question → Challenge</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Finalizar CBL: Big Idea, Essential Question, Challenge</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="cd-2">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Escolher problema real e entrevistar 3–5 pessoas</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Entrevistar mais pessoas (total: 5+)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="cd-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Documentar processo CBL completo</span></label>
-                            <span class="priority high">Alta</span>
-                        </li>
-                        <li class="checklist-item" data-id="cd-4">
                             <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Criar wireframe completo (Figma ou papel)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
-                        <li class="checklist-item" data-id="cd-5">
+                        <li class="checklist-item" data-id="cd-4">
                             <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Definir arquitetura do app (models, views, viewmodels)</span></label>
+                            <span class="priority high">Alta</span>
+                        </li>
+                        <li class="checklist-item" data-id="cd-5">
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Documentar processo CBL completo</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Projeto Principal -->
+            <!-- Projeto Principal — O Diferencial -->
             <div class="topic-card" data-topic="projeto-principal" data-step="4">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-6">Sem 14–16</span>
+                        <span class="step-badge step-6">Sem 14-16</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
                         <div>
                             <h3>Projeto Principal — O Diferencial</h3>
-                            <p class="topic-description">5+ telas, APIs Apple, acessibilidade, HIG, README CBL, vídeo demo</p>
+                            <p class="topic-description">5+ telas, APIs Apple, acessibilidade, HIG, README CBL, video demo</p>
                         </div>
                     </div>
                     <div class="topic-meta">
@@ -744,7 +672,7 @@
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pm-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Polish visual seguindo HIG (SF Symbols, cores semânticas)</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Polish visual seguindo HIG (SF Symbols, cores semanticas)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pm-4">
@@ -756,7 +684,7 @@
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pm-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Gravar vídeo demo de 1 minuto</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Gravar video demo de 1 minuto</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pm-7">
@@ -789,13 +717,13 @@
             <div class="topic-card" data-topic="portfolio" data-step="5">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-5">Sem 17–18</span>
+                        <span class="step-badge step-5">Sem 17-18</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                         </div>
                         <div>
                             <h3>Portfolio + Simulados</h3>
-                            <p class="topic-description">GitHub profile, revisão de projetos, simulado de prova 80%+</p>
+                            <p class="topic-description">GitHub profile, revisao de projetos, simulado de prova 80%+</p>
                         </div>
                     </div>
                     <div class="topic-meta">
@@ -814,32 +742,32 @@
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pf-3">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simulado de prova técnica cronometrado (meta: 80%+)</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simulado de prova tecnica cronometrado (meta: 80%+)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pf-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisão intensiva de C para prova</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisao intensiva de C para prova</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="pf-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisão de raciocínio lógico para prova</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Revisao de raciocinio logico para prova</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Preparação de Entrevista -->
+            <!-- Preparacao de Entrevista -->
             <div class="topic-card" data-topic="entrevista-final" data-step="5">
                 <div class="topic-header" onclick="toggleTopic(this)">
                     <div class="topic-info">
-                        <span class="step-badge step-6">Sem 19–20</span>
+                        <span class="step-badge step-6">Sem 19-20</span>
                         <div class="topic-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                         </div>
                         <div>
-                            <h3>Preparação de Entrevista</h3>
-                            <p class="topic-description">Pitch, simulação, dinâmica de grupo, reflexão final</p>
+                            <h3>Preparacao de Entrevista</h3>
+                            <p class="topic-description">Pitch, simulacao, dinamica de grupo, reflexao final</p>
                         </div>
                     </div>
                     <div class="topic-meta">
@@ -862,15 +790,15 @@
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="ef-4">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simular dinâmica de grupo (problema → solução em 15 min)</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Simular dinamica de grupo (problema → solucao em 15 min)</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="ef-5">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Verificar: GitHub público, links funcionam, READMEs ok</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Verificar: GitHub publico, links funcionam, READMEs ok</span></label>
                             <span class="priority high">Alta</span>
                         </li>
                         <li class="checklist-item" data-id="ef-6">
-                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Escrever reflexão "O que aprendi nessa jornada"</span></label>
+                            <label><input type="checkbox"><span class="checkmark"></span><span class="item-text">Escrever reflexao "O que aprendi nessa jornada"</span></label>
                             <span class="priority medium">Media</span>
                         </li>
                     </ul>
